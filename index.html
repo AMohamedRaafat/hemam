@@ -115,19 +115,12 @@
 
     <!-- Drawer Menu -->
     <div id="drawer-menu" class="drawer-menu">
-      <div class="bg-black flex items-center justify-between mb-8 px-10 py-5">
+      <div class="bg-black flex items-center justify-between mb-5 px-10 py-5">
         <span class="icon-logo text-[68px] text-[#ff882e]"></span>
         <button id="close-menu" class="text-white text-2xl">×</button>
       </div>
-      <div class="p-6">
-        <ul class="space-y-6 text-right flex-1 h-[80vw]">
-          <li>
-            <a
-              href="#home"
-              class="text-black text-[16px] font-semibold block py-2"
-              >الرئيسية</a
-            >
-          </li>
+      <div class="px-6">
+        <ul class="space-y-1 text-right flex-1 h-[80vw]">
           <li>
             <a
               href="#features"
@@ -157,6 +150,11 @@
             >
           </li>
         </ul>
+        <button
+          class="bg-orange-primary w-full mb-3 rounded-full text-black font-semibold px-5 py-2 flex items-center justify-center gap-4 transition"
+        >
+          <span>احصل على الامتياز التجاري</span>
+        </button>
         <div class="mt-8 pt-8 border-t border-gray-200">
           <p class="text-black font-bold text-sm text-center mb-6">
             © 2025 جميع الحقوق محفوظة - همم
@@ -196,8 +194,8 @@
     </div>
     <!-- Why Hammam Section -->
     <section id="features" class="why-section">
-      <div class="container">
-        <div class="why-image-container">
+      <div class="md:px-20 px-2 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="why-image-container md:block hidden">
           <div class="section-title">
             <h2>
               لماذا خدمة همم هي <span class="text-orange-primary">الأنسب</span>
@@ -217,29 +215,49 @@
             />
           </div>
         </div>
-        <div class="why-cards">
-          <div class="why-card">
-            <div class="why-icon">✓</div>
-            <h3>آمن وموثوق</h3>
-            <p>نظام تتبع للرحلات وتشمل تتبع الوصول للقدر</p>
+        <div
+          class="why-cards col-span-1 md:col-span-2 grid grid-cols-1 md:grid-cols-2 px-2 md:px-20"
+        >
+          <div class="md:hidden block">
+            <h2 class="text-center text-2xl font-bold mb-4">
+              لماذا خدمة همم هي <span class="text-orange-primary">الأنسب</span>
+              لك؟
+            </h2>
           </div>
           <div class="why-card">
-            <div class="why-icon">👤</div>
+            <div class="why-icon">
+              <img
+                src="./assets/imgs/why/drivers.svg"
+                alt="Professional Drivers"
+              />
+            </div>
             <h3>سائقون محترفون</h3>
+            <hr class="w-full border-t border-gray-200" />
             <p>مدربون على التعامل باحترام واحترافية</p>
           </div>
           <div class="why-card">
-            <div class="why-icon">🚐</div>
-            <h3>مركبات مجهزة</h3>
-            <p>
-              مركبات تسمح لك بطلب رحلة خلال حل الكراسي المتحركة وتجهيزات مناسبة
-              لذوي الإعاقة
-            </p>
+            <div class="why-icon">
+              <img src="./assets/imgs/why/safe.svg" alt="Safe and Trusted" />
+            </div>
+            <h3>آمن وموثوق</h3>
+            <hr class="w-full border-t border-gray-200" />
+            <p>نظام تتبع للرحلات وتشمل تتبع الوصول للقدر</p>
           </div>
           <div class="why-card">
-            <div class="why-icon">📅</div>
+            <div class="why-icon">
+              <img src="./assets/imgs/why/reserved.svg" alt="Easy Booking" />
+            </div>
             <h3>حجز سهل</h3>
-            <p>احجز رحلتك بسهولة عبر تطبيقنا أو موقعنا الإلكتروني</p>
+            <hr class="w-full border-t border-gray-200" />
+            <p>واجهة بسيطة تسمح لك بطلب رحلة خلال ثوان</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">
+              <img src="./assets/imgs/why/car.svg" alt="Equipped Vehicles" />
+            </div>
+            <h3>مركبات مجهزة</h3>
+            <hr class="w-full border-t border-gray-200" />
+            <p>دعم الكراسي المتحركة وتجهيزات مناسبة لذوي الهمم</p>
           </div>
         </div>
       </div>
@@ -252,33 +270,39 @@
         <div class="services-grid">
           <div class="service-item">
             <div class="service-screenshot">
-              <div class="phone-frame">
-                <div class="phone-screen"></div>
-              </div>
+              <img src="./assets/imgs/services/gebly.png" alt="Explore" />
             </div>
-            <div class="service-icon">📍</div>
-            <h3>استكشف</h3>
-            <p>اكتشف مدينتك بطريقة ممتعة!</p>
+            <div class="content">
+              <h3>جيبلي</h3>
+              <p>اكتشف مدينتك بطريقة من مشوار لمشوار… جيبلي يجيب لك كل شي!</p>
+            </div>
           </div>
           <div class="service-item">
             <div class="service-screenshot">
-              <div class="phone-frame">
-                <div class="phone-screen"></div>
-              </div>
+              <img src="./assets/imgs/services/faz3a.png" alt="Explore" />
             </div>
-            <div class="service-icon">🚗</div>
-            <h3>جولة</h3>
-            <p>رحلتك آمنة ومريحة، مع سائق موثوق وسعر واضح</p>
+            <div class="content">
+              <h3>فزعة</h3>
+              <p>وقت الطوارئ لا تشيل هم!</p>
+            </div>
           </div>
           <div class="service-item">
             <div class="service-screenshot">
-              <div class="phone-frame">
-                <div class="phone-screen"></div>
-              </div>
+              <img src="./assets/imgs/services/gawla.png" alt="Explore" />
             </div>
-            <div class="service-icon">🚨</div>
-            <h3>فرع</h3>
-            <p>وقت الطوارئ لا تنسى همم!</p>
+            <div class="content">
+              <h3>جولة</h3>
+              <p>رحلتك لأي وجهة، مع سائق موثوق وسعر واضح</p>
+            </div>
+          </div>
+          <div class="service-item">
+            <div class="service-screenshot">
+              <img src="./assets/imgs/services/estakshef.png" alt="Explore" />
+            </div>
+            <div class="content">
+              <h3>استكشف</h3>
+              <p>اكتشف مدينتك بطريقة ممتعة!</p>
+            </div>
           </div>
         </div>
       </div>
