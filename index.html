@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>همم - رحلات آمنة ومجهزة لذوي الإعاقة وكبار السن</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header-container">
+      <div class="hero-overlay"></div>
+
+      <!-- Navigation Bar -->
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <span class="icon-logo" style="color: white"></span>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="nav-links">
+              <a href="#features">المزايا</a>
+              <a href="#services">الخدمات</a>
+              <a href="#how-to-start">طريقة العمل</a>
+              <a href="#download">حمل التطبيق</a>
+            </div>
+            <button class="nav-cta-btn">احصل على الامتياز التجاري</button>
+          </div>
+          <button id="menu-toggle" class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Drawer Overlay -->
+      <div id="drawer-overlay" class="drawer-overlay"></div>
+
+      <!-- Drawer Menu -->
+      <div id="drawer-menu" class="drawer-menu">
+        <div class="bg-black flex items-center justify-between mb-8 px-10 py-5">
+          <span class="icon-logo" style="color: white; font-size: 48px"></span>
+          <button id="close-menu" class="text-white text-2xl">×</button>
+        </div>
+        <div class="p-6 py-0">
+          <ul class="space-y-1 text-right flex-1">
+            <li>
+              <a href="#features" class="text-black text-[14px] font-bold block"
+                >المزايا</a
+              >
+            </li>
+            <li>
+              <a href="#services" class="text-black text-[14px] font-bold block"
+                >الخدمات</a
+              >
+            </li>
+            <li>
+              <a
+                href="#how-to-start"
+                class="text-black text-[14px] font-bold block"
+                >طريقة العمل</a
+              >
+            </li>
+
+            <li>
+              <a href="#download" class="text-black text-[14px] font-bold block"
+                >حمل التطبيق</a
+              >
+            </li>
+          </ul>
+          <button
+            class="w-full text-[16px] bg-orange-primary text-black hover-bg-orange-dark rounded-full px-5 py-3 mb-6 font-bold text-center transition"
+          >
+            احصل على الامتياز التجاري
+          </button>
+          <div class="mt-8 pt-8 border-t border-gray-200">
+            <p class="text-black font-bold text-sm text-center mb-6">
+              © 2025 جميع الحقوق محفوظة - همم
+            </p>
+            <div class="flex gap-3 px-5">
+              <a
+                href="#"
+                class="flex-1 bg-black text-white rounded-lg px-2 py-2 flex items-center justify-center gap-4 transition"
+              >
+                <img src="./assets/imgs/play.svg" alt="App Store" />
+
+                <div class="flex flex-col">
+                  <span class="text-[10px]">أحصل عليه على</span>
+                  <span class="text-[10px] font-bold">Google Play</span>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="flex-1 bg-black text-white rounded-lg px-2 py-2 flex items-center justify-center gap-4 transition"
+              >
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"
+                  />
+                </svg>
+                <div class="flex flex-col">
+                  <span class="text-[10px]">حمل من</span>
+                  <span class="text-[10px] font-bold">متجر التطبيقات</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Section -->
+      <section id="home" class="hero-section">
+        <div class="hero-content">
+          <p class="hero-service-title">خدمة نقل طبي</p>
+          <h1 class="hero-title">رحلات آمنة ومجهزة لذوي الإعاقة وكبار السن</h1>
+          <p class="hero-text">
+            قد سيارتك، استلم طلباتك، وتابع أرباحك — كل شيء من خلال تطبيق واحد
+            مصمم لك.
+          </p>
+          <div class="hero-app-buttons">
+            <div class="flex gap-3">
+              <a
+                href="#"
+                class="flex-1 bg-[#FFFFFF21] md:bg-[#FFFFFF52] backdrop-blur-md text-white rounded-lg px-2 py-2 flex items-center justify-center gap-4 hover:bg-gray-800 transition"
+              >
+                <img
+                  src="../assets/imgs/play.svg"
+                  alt="Google Play"
+                  class="w-8 h-8"
+                />
+                <div class="flex flex-col text-start">
+                  <span class="text-[10px] md:text-[12px]">أحصل عليه على</span>
+                  <span class="text-[10px] md:text-[12px] font-bold"
+                    >Google Play</span
+                  >
+                </div>
+              </a>
+              <a
+                href="#"
+                class="flex-1 bg-[#FFFFFF21] md:bg-[#FFFFFF52] backdrop-blur-md text-white rounded-lg px-2 py-2 flex items-center justify-center gap-4 transition"
+              >
+                <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"
+                  />
+                </svg>
+                <div class="flex flex-col text-start">
+                  <span class="text-[10px] md:text-[12px]">حمل من</span>
+                  <span class="text-[10px] md:text-[12px] font-bold"
+                    >App Store</span
+                  >
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="hero-bottom">
+        <div class="hero-description-text px-5 text-[14px]">
+          <p>
+            احجز مشوارك بسهولة مع سائقين محترفين ومركبات ملائمة للكراسي المتحركة
+            - كل ذلك عبر تطبيق همم
+          </p>
+        </div>
+        <div class="hero-features">
+          <div class="hero-feature">
+            <span>نوع المركبة</span>
+            <span>مجهزة كرسي متحرك</span>
+          </div>
+          <div class="hero-feature">
+            <span>السائق</span>
+            <span>مدرب ومهني</span>
+          </div>
+          <div class="hero-feature">
+            <span>الحجز</span>
+            <span>سريع وخطوات قليلة</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Hammam Section -->
+    <section id="features" class="why-section">
+      <div class="container">
+        <div class="why-image-container">
+          <div class="section-title">
+            <h2>
+              لماذا خدمة همم هي <span class="text-orange-primary">الأنسب</span>
+              لك؟
+            </h2>
+            <img
+              class="vector-2"
+              src="./assets/imgs/why/Vector-2.svg"
+              alt="Why Hammam"
+              class="w-full h-full object-cover absolute top-0 left-0 z-[1]"
+            />
+            <img
+              class="vector-3"
+              src="./assets/imgs/why/Vector3.svg"
+              alt="Why Hammam"
+              class="w-full h-full object-cover absolute top-0 left-0 z-[1]"
+            />
+          </div>
+        </div>
+        <div class="why-cards">
+          <div class="why-card">
+            <div class="why-icon">✓</div>
+            <h3>آمن وموثوق</h3>
+            <p>نظام تتبع للرحلات وتشمل تتبع الوصول للقدر</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">👤</div>
+            <h3>سائقون محترفون</h3>
+            <p>مدربون على التعامل باحترام واحترافية</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">🚐</div>
+            <h3>مركبات مجهزة</h3>
+            <p>
+              مركبات تسمح لك بطلب رحلة خلال حل الكراسي المتحركة وتجهيزات مناسبة
+              لذوي الإعاقة
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">📅</div>
+            <h3>حجز سهل</h3>
+            <p>احجز رحلتك بسهولة عبر تطبيقنا أو موقعنا الإلكتروني</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <h2 class="section-title text-center">خدمات همم</h2>
+        <div class="services-grid">
+          <div class="service-item">
+            <div class="service-screenshot">
+              <div class="phone-frame">
+                <div class="phone-screen"></div>
+              </div>
+            </div>
+            <div class="service-icon">📍</div>
+            <h3>استكشف</h3>
+            <p>اكتشف مدينتك بطريقة ممتعة!</p>
+          </div>
+          <div class="service-item">
+            <div class="service-screenshot">
+              <div class="phone-frame">
+                <div class="phone-screen"></div>
+              </div>
+            </div>
+            <div class="service-icon">🚗</div>
+            <h3>جولة</h3>
+            <p>رحلتك آمنة ومريحة، مع سائق موثوق وسعر واضح</p>
+          </div>
+          <div class="service-item">
+            <div class="service-screenshot">
+              <div class="phone-frame">
+                <div class="phone-screen"></div>
+              </div>
+            </div>
+            <div class="service-icon">🚨</div>
+            <h3>فرع</h3>
+            <p>وقت الطوارئ لا تنسى همم!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Start Section -->
+    <section id="how-to-start" class="how-section">
+      <div class="how-container">
+        <div class="how-content">
+          <h2 class="how-title">كيف تبدأ رحلتك مع همم؟</h2>
+          <div class="steps">
+            <div class="step">
+              <div class="step-number">01</div>
+              <div class="step-icon">📍</div>
+              <div class="step-content">
+                <h3>اختر موقعك ووجهتك</h3>
+                <p>حدد نقطة الانطلاق والوصول على الخريطة</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">02</div>
+              <div class="step-icon">🚗</div>
+              <div class="step-content">
+                <h3>اطلب الرحلة</h3>
+                <p>اختر نوع المركبة المناسب واطلب رحلتك</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">03</div>
+              <div class="step-icon">✓</div>
+              <div class="step-content">
+                <h3>انطلق بأمان</h3>
+                <p>استمتع برحلة آمنة ومريحة مع سائقين محترفين</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="how-image"></div>
+      </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="partners-section">
+      <div class="container">
+        <h2 class="section-title text-right">شركاء النجاح</h2>
+        <div class="partners-carousel">
+          <button class="carousel-btn carousel-prev">‹</button>
+          <div class="partners-grid">
+            <div class="partner-logo">GSA Live</div>
+            <div class="partner-logo">الرياض</div>
+            <div class="partner-logo">شارك</div>
+            <div class="partner-logo">SFD</div>
+          </div>
+          <button class="carousel-btn carousel-next">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Franchise Section -->
+    <section id="franchise" class="franchise-section">
+      <div class="container">
+        <div class="franchise-content">
+          <div class="franchise-image">
+            <div class="franchise-overlay-icon">✓</div>
+          </div>
+          <div class="franchise-text">
+            <h2>الامتياز التجاري</h2>
+            <p>
+              يتيح الاعتبار التجاري من همم الفرصة للمستثمرين لتشغيل وحدة نقل
+              محلية تحت علامة همم وذلك عبر نموذج عمل مدعوم حكومياً وبشراكة
+              مباشرة مع وزارة النقل، يقوم حامل الاعتبار باستخدام التطبيق المركزي
+              للإدارة والتنسيق
+            </p>
+            <button class="franchise-btn">احصل على الامتياز التجاري</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download App Section -->
+    <section id="download" class="download-section">
+      <div class="container">
+        <div class="download-content">
+          <div class="download-left">
+            <h2 class="section-title text-right">
+              حمل تطبيق همم الآن واستمتع برحلات أسهل
+            </h2>
+            <div class="download-buttons">
+              <a href="#" class="download-btn light">
+                <svg
+                  class="download-icon"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"
+                  />
+                </svg>
+                <span>App Store</span>
+              </a>
+              <a href="#" class="download-btn light">
+                <svg
+                  class="download-icon"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"
+                  />
+                </svg>
+                <span>Google Play</span>
+              </a>
+            </div>
+            <div class="download-features">
+              <div class="download-feature">
+                <span class="feature-icon-small">💡</span>
+                <span>الابتكار أولاً</span>
+              </div>
+              <div class="download-feature">
+                <span class="feature-icon-small">🔄</span>
+                <span>تحديثات حصرية</span>
+              </div>
+            </div>
+          </div>
+          <div class="download-screenshot">
+            <div class="phone-frame-large">
+              <div class="phone-screen-large"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <span class="footer-logo-text">همم</span>
+          <p class="footer-description">
+            احجز مشوارك بسهولة مع سائقين محترفين ومركبات ملائمة للكراسي المتحركة
+            - كل ذلك عبر تطبيق همم
+          </p>
+          <div class="social-icons">
+            <a href="#" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                />
+              </svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                />
+              </svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                />
+              </svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-contact-grid">
+          <div class="contact-item">
+            <div class="contact-icon-box">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                />
+              </svg>
+            </div>
+            <h4>الدعم الفني</h4>
+            <p>support@example.com</p>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon-box">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                />
+              </svg>
+            </div>
+            <h4>رقم الهاتف</h4>
+            <p>+1 (415) 555-0199</p>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon-box">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                />
+              </svg>
+            </div>
+            <h4>العنوان</h4>
+            <p>1024 جدة، المملكة العربية السعودية</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-links">
+            <a href="#">سياسة الخصوصية</a> | <a href="#">الشروط والاحكام</a>
+          </p>
+          <p class="copyright">جميع الحقوق محفوظة لهمم 2025</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
