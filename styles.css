@@ -130,32 +130,41 @@ body {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 1998;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  z-index: 40;
 }
 
 .drawer-overlay.active {
   display: block;
-  opacity: 1;
 }
 
 .drawer-menu {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 85%;
+  width: 100%;
   max-width: 400px;
   height: 100vh;
   background: white;
-  z-index: 1999;
+  z-index: 50;
   transition: right 0.3s ease;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .drawer-menu.active {
   right: 0;
+}
+
+/* Hide drawer on desktop */
+@media (min-width: 768px) {
+  .drawer-menu {
+    display: none !important;
+  }
+  .drawer-overlay {
+    display: none !important;
+  }
 }
 
 .drawer-menu .bg-black {
@@ -214,7 +223,7 @@ body {
   color: var(--primary-orange);
 }
 
-.drawer-menu > div.p-6 {
+.drawer-menu .p-6 {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 100px);
@@ -1205,6 +1214,7 @@ body {
 
   .drawer-menu {
     width: 100%;
+    max-width: 100%;
   }
 }
 
