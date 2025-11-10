@@ -6,6 +6,15 @@
     <title>همم - رحلات آمنة ومجهزة لذوي الإعاقة وكبار السن</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css" />
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -311,12 +320,13 @@
     <!-- How to Start Section -->
     <section id="how-to-start" class="how-section">
       <div class="how-container">
+        <div class="how-image"></div>
+
         <div class="how-content">
           <h2 class="how-title">كيف تبدأ رحلتك مع همم؟</h2>
           <div class="steps">
             <div class="step">
               <div class="step-number">01</div>
-              <div class="step-icon">📍</div>
               <div class="step-content">
                 <h3>اختر موقعك ووجهتك</h3>
                 <p>حدد نقطة الانطلاق والوصول على الخريطة</p>
@@ -324,7 +334,6 @@
             </div>
             <div class="step">
               <div class="step-number">02</div>
-              <div class="step-icon">🚗</div>
               <div class="step-content">
                 <h3>اطلب الرحلة</h3>
                 <p>اختر نوع المركبة المناسب واطلب رحلتك</p>
@@ -332,7 +341,6 @@
             </div>
             <div class="step">
               <div class="step-number">03</div>
-              <div class="step-icon">✓</div>
               <div class="step-content">
                 <h3>انطلق بأمان</h3>
                 <p>استمتع برحلة آمنة ومريحة مع سائقين محترفين</p>
@@ -340,23 +348,134 @@
             </div>
           </div>
         </div>
-        <div class="how-image"></div>
       </div>
     </section>
 
     <!-- Partners Section -->
     <section id="partners" class="partners-section">
       <div class="container">
-        <h2 class="section-title text-right">شركاء النجاح</h2>
-        <div class="partners-carousel">
-          <button class="carousel-btn carousel-prev">‹</button>
-          <div class="partners-grid">
-            <div class="partner-logo">GSA Live</div>
-            <div class="partner-logo">الرياض</div>
-            <div class="partner-logo">شارك</div>
-            <div class="partner-logo">SFD</div>
+        <h2 class="section-title text-center mb-12">شركاء النجاح</h2>
+        <div class="partners-carousel-wrapper">
+          <div class="owl-carousel owl-theme" id="partnersCarousel">
+            <!-- Partner 1: GSA Live -->
+            <div class="item">
+              <div class="partner-card">
+                <div
+                  class="partner-logo-card bg-white rounded-xl border border-gray-200 flex items-center justify-center min-h-[120px]"
+                >
+                  <img
+                    src="./assets/imgs/partners/gsa-live.png"
+                    alt="GSA Live"
+                    class="partner-logo-img max-w-full max-h-20 object-contain"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                  />
+                  <div
+                    class="text-center partner-logo-fallback"
+                    style="display: none"
+                  >
+                    <div class="text-2xl font-bold text-black mb-1">GSA</div>
+                    <div class="text-sm font-bold text-black">Live</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Partner 3: Riyadh Front -->
+            <div class="item">
+              <div class="partner-card">
+                <div
+                  class="partner-logo-card bg-white rounded-xl border border-gray-200 flex items-center justify-center min-h-[120px]"
+                >
+                  <img
+                    src="./assets/imgs/partners/riyadh-front.png"
+                    alt="Riyadh Front"
+                    class="partner-logo-img max-w-full max-h-20 object-contain"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                  />
+                  <div
+                    class="text-center partner-logo-fallback"
+                    style="display: none"
+                  >
+                    <div
+                      class="text-lg font-bold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent mb-1"
+                    >
+                      واجهة الرياض
+                    </div>
+                    <div class="text-xs text-blue-600 font-semibold">
+                      RIYADH FRONT
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Partner 4: National Center for Documents and Archives -->
+            <div class="item">
+              <div class="partner-card">
+                <div
+                  class="partner-logo-card bg-white rounded-xl border border-gray-200 flex items-center justify-center min-h-[120px]"
+                >
+                  <img
+                    src="./assets/imgs/partners/national-center.png"
+                    alt="المركز الوطني للوثائق والمحفوظات"
+                    class="partner-logo-img max-w-full max-h-20 object-contain"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                  />
+                  <div
+                    class="text-center partner-logo-fallback"
+                    style="display: none"
+                  >
+                    <div class="text-sm font-bold text-blue-900 mb-1">
+                      المركز الوطني للوثائق والمحفوظات
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Partner 5: Sharek -->
+            <div class="item">
+              <div class="partner-card">
+                <div
+                  class="partner-logo-card bg-white rounded-xl border border-gray-200 flex items-center justify-center min-h-[120px]"
+                >
+                  <img
+                    src="./assets/imgs/partners/sharek.png"
+                    alt="Sharek"
+                    class="partner-logo-img max-w-full max-h-20 object-contain"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                  />
+                  <div
+                    class="text-center partner-logo-fallback"
+                    style="display: none"
+                  >
+                    <div class="text-2xl font-bold text-blue-600">شارك</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Partner 6: SFD -->
+            <div class="item">
+              <div class="partner-card">
+                <div
+                  class="partner-logo-card bg-white rounded-xl border border-gray-200 flex items-center justify-center min-h-[120px]"
+                >
+                  <img
+                    src="./assets/imgs/partners/sfd.png"
+                    alt="SFD - الصندوق السعودي للتنمية"
+                    class="partner-logo-img max-w-full max-h-20 object-contain"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                  />
+                  <div
+                    class="text-center partner-logo-fallback"
+                    style="display: none"
+                  >
+                    <div class="text-xl font-bold text-gray-600 mb-1">SFD</div>
+                    <div class="text-xs text-gray-600">
+                      الصندوق السعودي للتنمية
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <button class="carousel-btn carousel-next">›</button>
         </div>
       </div>
     </section>
@@ -520,6 +639,9 @@
       </div>
     </footer>
 
+    <!-- Owl Carousel JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

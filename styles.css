@@ -619,7 +619,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: var(--white);
+  color: var(--black);
 }
 
 .how-title {
@@ -645,9 +645,9 @@ body {
 .step-number {
   width: 50px;
   height: 50px;
-  background: var(--white);
-  color: var(--primary-orange);
-  border-radius: 50%;
+  background: var(--black);
+  color: var(--white);
+  border-radius: 25%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -675,8 +675,7 @@ body {
 }
 
 .how-image {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect fill="%23f0f0f0" width="800" height="600"/></svg>');
+  background-image: url("./assets/imgs/how-to/bg.png");
   background-size: cover;
   background-position: center;
 }
@@ -687,59 +686,119 @@ body {
   padding: 80px 0;
 }
 
-.partners-carousel {
+.partners-section .section-title.text-center {
+  margin-bottom: 48px;
+}
+
+.partners-carousel-wrapper {
   position: relative;
-  display: flex;
-  align-items: center;
-  gap: 20px;
+  width: 100%;
 }
 
-.carousel-btn {
-  background: var(--white);
-  border: 2px solid var(--primary-orange);
-  color: var(--primary-orange);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  font-size: 32px;
+/* Owl Carousel Custom Styles */
+#partnersCarousel {
+  position: relative;
+}
+
+#partnersCarousel .item {
+  padding: 0 12px;
+}
+
+.partner-card {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.partner-logo-card {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s;
-  flex-shrink: 0;
+  border-radius: 10px;
 }
 
-.carousel-btn:hover {
-  background: var(--primary-orange);
-  color: var(--white);
-}
-
-.partners-grid {
+/* Owl Carousel Navigation Buttons */
+.owl-nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  flex: 1;
-  overflow-x: auto;
-  scroll-behavior: smooth;
+  gap: 16px;
+  margin-top: 32px;
 }
 
-.partner-logo {
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--gray);
-  padding: 20px 40px;
-  background: var(--white);
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s;
-  white-space: nowrap;
+.owl-nav button {
+  background: white !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 50% !important;
+  width: 48px !important;
+  height: 48px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
 }
 
-.partner-logo:hover {
+.owl-nav button:hover {
+  background: #f9fafb !important;
+  border-color: #9ca3af !important;
   transform: scale(1.05);
+}
+
+.owl-nav button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.owl-nav button.owl-prev,
+.owl-nav button.owl-next {
+  position: static !important;
+  margin: 0 !important;
+}
+
+/* Hide navigation on desktop if not needed */
+@media (min-width: 1024px) {
+  .owl-nav {
+    display: flex;
+  }
+}
+
+.partner-logo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.partner-logo-img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+  display: block;
+}
+
+.partner-logo-fallback {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive adjustments for partners carousel */
+@media (max-width: 768px) {
+  .partner-card {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partner-card {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 /* Franchise Section */
@@ -1099,7 +1158,8 @@ body {
   }
 
   .how-image {
-    display: none;
+    /* display: none; */
+    height: 250px;
   }
 
   .franchise-content {
