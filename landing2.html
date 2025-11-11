@@ -3,48 +3,116 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>الامتياز التجاري - همم</title>
+    <title>همم - انضم كسائق محترف</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="landing2.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <!-- intl-tel-input CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
-    />
   </head>
   <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar bg-black">
-      <div class="nav-container">
-        <div class="nav-logo">
-          <a href="index.html">
+    <div class="header-container">
+      <div class="hero-overlay"></div>
+
+      <!-- Navigation Bar -->
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="nav-logo">
             <span class="icon-logo" style="color: white"></span>
-          </a>
-        </div>
-        <div class="flex items-center gap-4">
-          <div class="nav-links">
-            <a href="index.html#features">المزايا</a>
-            <a href="index.html#services">الخدمات</a>
-            <a href="index.html#how-to-start">طريقة العمل</a>
-            <a href="index.html#download">حمل التطبيق</a>
           </div>
-          <a href="franchise.html" class="nav-cta-btn"
-            >احصل على الامتياز التجاري</a
-          >
+          <div class="flex items-center gap-4">
+            <div class="nav-links">
+              <a href="#features">المزايا</a>
+              <a href="#how-to-start">طريقة العمل</a>
+              <a href="#testimonials">التجارب</a>
+              <a href="#faq">الأسئلة الشائعة</a>
+              <a href="#download">حمل التطبيق</a>
+            </div>
+            <a href="franchise.html" class="nav-cta-btn"
+              >احصل على الامتياز التجاري</a
+            >
+          </div>
+          <button id="menu-toggle" class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
-        <button id="menu-toggle" class="menu-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+      </nav>
+
+      <!-- Hero Section -->
+      <section id="home" class="hero-section">
+        <div class="hero-content">
+          <p class="hero-service-title">خدمة نقل طبي</p>
+          <h1 class="hero-title">رحلات آمنة ومجهزة لذوي الإعاقة وكبار السن</h1>
+          <p class="hero-text">
+            قد سيارتك، استلم طلباتك، وتابع أرباحك — كل شيء من خلال تطبيق واحد
+            مصمم لك.
+          </p>
+          <div class="hero-app-buttons">
+            <div class="flex gap-3">
+              <a
+                href="#"
+                class="flex-1 bg-[#FFFFFF21] md:bg-[#FFFFFF52] backdrop-blur-md text-white rounded-lg px-2 py-2 flex items-center justify-center gap-4 hover:bg-gray-900 transition"
+              >
+                <img
+                  src="./assets/imgs/play.svg"
+                  alt="Google Play"
+                  class="w-8 h-8"
+                />
+                <div class="flex flex-col text-start">
+                  <span class="text-[10px] md:text-[12px]">أحصل عليه على</span>
+                  <span class="text-[10px] md:text-[12px] font-bold"
+                    >Google Play</span
+                  >
+                </div>
+              </a>
+              <a
+                href="#"
+                class="flex-1 bg-[#FFFFFF21] md:bg-[#FFFFFF52] backdrop-blur-md text-white rounded-lg px-2 py-2 flex items-center justify-center gap-4 hover:bg-gray-900 transition"
+              >
+                <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"
+                  />
+                </svg>
+                <div class="flex flex-col text-start">
+                  <span class="text-[10px] md:text-[12px]">حمل من</span>
+                  <span class="text-[10px] md:text-[12px] font-bold"
+                    >متجر التطبيقات</span
+                  >
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="hero-bottom">
+        <div class="hero-description-text px-5 text-[14px]">
+          <p>
+            احجز مشوارك بسهولة مع سائقين محترفين ومركبات ملائمة للكراسي المتحركة
+            - كل ذلك عبر تطبيق همم
+          </p>
+        </div>
+        <div class="hero-features">
+          <div class="hero-feature">
+            <span>نوع المركبة</span>
+            <span>مجهزة كرسي متحرك</span>
+          </div>
+          <div class="hero-feature">
+            <span>السائق</span>
+            <span>مدرب ومهني</span>
+          </div>
+          <div class="hero-feature">
+            <span>الحجز</span>
+            <span>سريع وخطوات قليلة</span>
+          </div>
+        </div>
       </div>
-    </nav>
+    </div>
 
     <!-- Drawer Overlay -->
     <div id="drawer-overlay" class="drawer-overlay"></div>
@@ -59,35 +127,35 @@
         <ul class="text-right flex-1 h-[80vw]">
           <li>
             <a
-              href="index.html#home"
-              class="text-black text-[16px] font-semibold block py-1"
-              >الرئيسية</a
-            >
-          </li>
-          <li>
-            <a
-              href="index.html#features"
+              href="#features"
               class="text-black text-[16px] font-semibold block py-1"
               >المزايا</a
             >
           </li>
           <li>
             <a
-              href="index.html#services"
-              class="text-black text-[16px] font-semibold block py-1"
-              >الخدمات</a
-            >
-          </li>
-          <li>
-            <a
-              href="index.html#how-to-start"
+              href="#how-to-start"
               class="text-black text-[16px] font-semibold block py-1"
               >طريقة العمل</a
             >
           </li>
           <li>
             <a
-              href="index.html#download"
+              href="#testimonials"
+              class="text-black text-[16px] font-semibold block py-1"
+              >التجارب</a
+            >
+          </li>
+          <li>
+            <a
+              href="#faq"
+              class="text-black text-[16px] font-semibold block py-1"
+              >الأسئلة الشائعة</a
+            >
+          </li>
+          <li>
+            <a
+              href="#download"
               class="text-black text-[16px] font-semibold block py-1"
               >حمل التطبيق</a
             >
@@ -115,7 +183,7 @@
               />
               <div class="flex flex-col">
                 <span class="text-[10px]">أحصل عليه على</span>
-                <span class="text-[10px] font-bold">Google Play</span>
+                <span class="text-[10px] font-bold">App store</span>
               </div>
             </a>
             <a
@@ -137,152 +205,308 @@
       </div>
     </div>
 
-    <!-- Franchise Form Section -->
-    <section id="franchise-form" class="franchise-form-section">
-      <div class="franchise-form-header container">
-        <a href="index.html" class="back-to-home-btn">
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M2.66699 8H13.3337M13.3337 8L9.33366 4M13.3337 8L9.33366 12"
-              stroke="black"
-              stroke-width="1.4"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-
-          <span>عودة للرئيسية</span>
-        </a>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <h1 class="franchise-form-title">الامتياز التجاري</h1>
-            <p class="franchise-form-description">
-              برجاء تعبئة النموذج التالي للحصول على الامتياز التجاري لدى همم
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+      <div class="container">
+        <h2 class="section-title text-center">
+          كل ما تحتاجه للانطلاق مع همم في الرياض
+        </h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <div class="icon-circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M14 2V8H20"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h3>إدارة المستندات بسهولة</h3>
+            <p>
+              ارفع الهوية والرخصة والاستمارة وتابع حالة الموافقات من نفس المكان.
             </p>
-            <div class="hidden md:block dots">
-              <img src="./assets/imgs/franchise/vector.png" alt="Dots" />
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <div class="icon-circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h3>ملاحة ذكية ودعم داخل التطبيق</h3>
+            <p>أفضل مسار لكل رحلة، وتنبيهات بالازدحام، ودعم فوري عند الحاجة.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <div class="icon-circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M3 3V21H21"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M7 16L12 11L16 15L21 10"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M21 10H15V4"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h3>تتبع الدخل لحظة بلحظة</h3>
+            <p>
+              راقب أرباحك اليومية والأسبوعية والخصومات والمكافآت بشفافية كاملة.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <div class="icon-circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M5 17H4C3.46957 17 2.96086 16.7893 2.58579 16.4142C2.21071 16.0391 2 15.5304 2 15V5C2 4.46957 2.21071 3.96086 2.58579 3.58579C2.96086 3.21071 3.46957 3 4 3H14C14.5304 3 15.0391 3.21071 15.4142 3.58579C15.7893 3.96086 16 4.46957 16 5V6M19 8H9C8.46957 8 7.96086 8.21071 7.58579 8.58579C7.21071 8.96086 7 9.46957 7 10V20C7 20.5304 7.21071 21.0391 7.58579 21.4142C7.96086 21.7893 8.46957 22 9 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V10C21 9.46957 20.7893 8.96086 20.4142 8.58579C20.0391 8.21071 19.5304 8 19 8Z"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h3>رحلات فورية بالقرب منك</h3>
+            <p>
+              استقبل الطلبات الأقرب لموقعك مع توازن تلقائي بين المسافة والطلب.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Start Section -->
+    <section id="how-to-start" class="how-section">
+      <div class="container">
+        <h2 class="section-title text-center">جاهز تنطلق مع همم؟ هيك تبدأ</h2>
+        <p class="how-intro text-center">
+          ميزات واضحة وخطوات بسيطة علشان تفعل حسابك وتستقبل الرحلات وتتابع دخلك
+          بسهولة.
+        </p>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M13 2L3 14H12L11 22L21 10H12L13 2Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>الخطوة 1: أنشئ حسابك وفعل بياناتك</h3>
+            <p>
+              سجل خلال دقائق، اختر المدينة، وأكمل رفع الهوية، الرخصة، والاستمارة
+              للتحقق السريع.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>الخطوة 2: ابدأ العمل على التطبيق</h3>
+            <p>
+              بعد الموافقة، ادخل أونلاين، واستقبل أقرب الطلبات مع توجيه ذكي
+              لمسارك.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>الخطوة 3: نفذ الرحلات واستفد من الحوافز</h3>
+            <p>
+              التزم بسياسات الرحلة، استكشف ساعات الذروة، وزد دخلك عبر العروض
+              الأسبوعية.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M3 3V21H21"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7 16L12 11L16 15L21 10"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M21 10H15V4"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>الخطوة 4: راقب الأداء والدخل لحظة بلحظة</h3>
+            <p>
+              شاهد لوحة الأداء، أرباحك اليومية / الأسبوعية، والخصومات والمكافآت
+              بشفافية كاملة.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+      <div class="container">
+        <h2 class="section-title text-center">تجارب كباتن همم</h2>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p class="testimonial-text">
+              تجربة همم غيرت دخلي بشكل كبير. الطلبات واضحة، والدعم سريع،
+              والتطبيق سهل جدا. قدرت أزود دخلي وأشتغل براحة وبدون تعقيد
+            </p>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>أحمد العتيبي</h4>
+                <p>كابتن همم - الرياض</p>
+              </div>
+              <div class="author-avatar">
+                <img
+                  src="./assets/imgs/services/gebly.png"
+                  alt="أحمد العتيبي"
+                  onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%23ff882e%22/%3E%3Ctext x=%2250%22 y=%2260%22 font-size=%2230%22 text-anchor=%22middle%22 fill=%22white%22%3Eأ%3C/text%3E%3C/svg%3E'"
+                />
+              </div>
             </div>
           </div>
-          <div class="franchise-form-wrapper">
-            <div class="franchise-form-container">
-              <!-- Success State (Hidden by default) -->
-              <div
-                id="success-message"
-                class="success-message"
-                style="display: none"
-              >
-                <div class="success-icon">
-                  <img src="./assets/imgs/franchise/success-icon.svg" />
-                </div>
-                <p class="success-text font-bold">
-                  تم ارسال الفورم بنجاح ، سيتم التواصل معكم في أقرب وقت
-                </p>
-                <button
-                  id="new-form-btn"
-                  class="new-form-btn rounded-full"
-                  onclick="showForm()"
-                >
-                  ارسال نموذج جديد
-                </button>
-              </div>
+          <div class="testimonial-nav">
+            <button class="nav-arrow nav-arrow-prev">‹</button>
+            <button class="nav-arrow nav-arrow-next">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-              <!-- Form (Visible by default) -->
-              <form
-                id="franchise-form-element"
-                class="franchise-form"
-                onsubmit="handleSubmit(event)"
-              >
-                <!-- Applicant Type Toggle -->
-                <input
-                  type="hidden"
-                  id="applicantType"
-                  name="applicantType"
-                  value="company"
-                />
-                <div class="applicant-type-toggle">
-                  <button
-                    type="button"
-                    class="toggle-btn active shadow"
-                    id="toggle-company"
-                    data-type="company"
-                    onclick="selectApplicantType('company', event)"
-                  >
-                    شركة
-                  </button>
-                  <button
-                    type="button"
-                    class="toggle-btn shadow"
-                    id="toggle-individual"
-                    data-type="individual"
-                    onclick="selectApplicantType('individual', event)"
-                  >
-                    فرد
-                  </button>
-                </div>
-
-                <!-- Full Name Field -->
-                <div class="form-group">
-                  <label for="fullName">الاسم كاملا</label>
-                  <input
-                    type="text"
-                    id="fullName"
-                    name="fullName"
-                    placeholder="يكتب هنا الاسم كاملا"
-                    required
-                  />
-                </div>
-
-                <!-- Email Field -->
-                <div class="form-group">
-                  <label for="email">البريد الالكتروني</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="يكتب هنا البريد الالكتروني"
-                    required
-                  />
-                </div>
-
-                <!-- Phone Number Field -->
-                <div class="form-group">
-                  <label for="phone">رقم الهاتف</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    placeholder="000 000 000"
-                    required
-                  />
-                </div>
-
-                <!-- Target City Field -->
-                <div class="form-group">
-                  <label for="city">المنطقة المستهدفة لاخد الامتياز</label>
-                  <div class="select-wrapper">
-                    <select id="city" name="city" required>
-                      <option value="">اختر المدينة</option>
-                      <option value="riyadh">الرياض</option>
-                      <option value="jeddah">جدة</option>
-                      <option value="dammam">الدمام</option>
-                      <option value="khobar">الخبر</option>
-                      <option value="makkah">مكة المكرمة</option>
-                      <option value="madina">المدينة المنورة</option>
-                    </select>
-                  </div>
-                </div>
-
-                <!-- Submit Button -->
-                <button type="submit" class="submit-btn rounded-full">
-                  ارسال
-                </button>
-              </form>
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+      <div class="container">
+        <h2 class="section-title text-center">الأسئلة الشائعة</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>كيف أسجل في همم؟</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                تقدر تسجل بسهولة من خلال التطبيق، وترفع المستندات المطلوبة. بعد
+                الموافقة تقدر تبدأ مباشرة.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>ما هي المستندات المطلوبة للتسجيل؟</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                تحتاج إلى رخصة القيادة، الهوية الوطنية، واستمارة المركبة. جميع
+                المستندات يمكن رفعها من خلال التطبيق.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>كم يستغرق قبول الطلب؟</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                عادة ما يتم مراجعة المستندات والموافقة عليها خلال 24-48 ساعة من
+                رفعها.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>كيف يتم احتساب الدخل؟</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                يتم احتساب الدخل بناءً على عدد الرحلات المكتملة، المسافة،
+                والوقت. يمكنك متابعة أرباحك لحظة بلحظة من خلال التطبيق.
+              </p>
             </div>
           </div>
         </div>
@@ -291,29 +515,10 @@
 
     <!-- Download App Section -->
     <section id="download" class="download-section">
-      <div class="md:px-20">
-        <div class="download-content px-2 md:px-20">
-          <div class="download-visual">
-            <div class="download-phone-wrapper">
-              <img
-                src="./assets/imgs/download/phone.png"
-                alt="Hemam App Phone"
-                class="download-phone"
-              />
-              <div class="download-card-wrapper">
-                <img
-                  src="./assets/imgs/download/card.png"
-                  alt="Hemam Card"
-                  class="download-card"
-                />
-              </div>
-            </div>
-          </div>
+      <div class="container">
+        <div class="download-content">
           <div class="download-left">
-            <h2 class="download-title">
-              حمل تطبيق همم الآن واستمتع برحلات أسهل
-            </h2>
-
+            <h2 class="download-title">حمل تطبيق همم الآن وابدأ رحلتك</h2>
             <div class="download-buttons">
               <a href="#" class="download-btn">
                 <img
@@ -322,14 +527,14 @@
                   class="download-icon"
                 />
                 <div class="download-btn-text">
-                  <span class="download-btn-label">احصل عليه من</span>
-                  <span class="download-btn-store">App Store</span>
+                  <span class="download-btn-label">احصل عليه على</span>
+                  <span class="download-btn-store">Google Play</span>
                 </div>
               </a>
               <a href="#" class="download-btn">
                 <img
                   src="./assets/imgs/apple.svg"
-                  alt="Google Play"
+                  alt="App Store"
                   class="download-icon"
                 />
                 <div class="download-btn-text">
@@ -337,26 +542,6 @@
                   <span class="download-btn-store">متجر التطبيقات</span>
                 </div>
               </a>
-            </div>
-            <div class="download-features">
-              <div class="download-feature">
-                <div class="feature-icon">
-                  <img src="./assets/imgs/updates.svg" />
-                </div>
-                <div>
-                  <span>تحديثات حصرية</span>
-                  <p>استمتع بأحدث المزايا والتحسينات فور صدورها في التطبيق.</p>
-                </div>
-              </div>
-              <div class="download-feature">
-                <div class="feature-icon">
-                  <img src="./assets/imgs/smile.svg" />
-                </div>
-                <div>
-                  <span>الإبتكار أولاً</span>
-                  <p>نطوّر ونبتكر باستمرار لتجربة تنقّل أكثر راحة.</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -483,213 +668,7 @@
       </div>
     </footer>
 
-    <!-- intl-tel-input JS -->
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-    <script src="script.js"></script>
-    <script>
-      // Initialize phone input with intl-tel-input
-      let phoneInput;
-
-      function initPhoneInput() {
-        const phoneInputElement = document.getElementById("phone");
-        if (phoneInputElement && window.intlTelInput) {
-          try {
-            phoneInput = window.intlTelInput(phoneInputElement, {
-              initialCountry: "sa",
-              onlyCountries: ["sa"],
-              utilsScript:
-                "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-              separateDialCode: true,
-              nationalMode: false,
-              formatOnDisplay: true,
-              allowDropdown: false,
-              autoPlaceholder: "polite",
-            });
-
-            // Force set Saudi Arabia immediately
-            phoneInput.setCountry("sa");
-
-            // Update the flag display manually
-            const flagContainer = phoneInputElement.parentElement.querySelector(
-              ".iti__flag-container"
-            );
-            if (flagContainer) {
-              const flagBox = flagContainer.querySelector(".iti__flag-box");
-              if (flagBox) {
-                flagBox.className = "iti__flag-box";
-                flagBox.setAttribute("data-country-code", "sa");
-              }
-            }
-
-            // Force update multiple times to ensure it sticks
-            setTimeout(function () {
-              if (phoneInput) {
-                phoneInput.setCountry("sa");
-                // Manually update flag
-                const flag =
-                  phoneInputElement.parentElement.querySelector(".iti__flag");
-                if (flag) {
-                  flag.className = "iti__flag iti__sa";
-                }
-              }
-            }, 100);
-
-            setTimeout(function () {
-              if (phoneInput) {
-                phoneInput.setCountry("sa");
-                // Trigger update event
-                phoneInputElement.dispatchEvent(new Event("countrychange"));
-              }
-            }, 500);
-          } catch (e) {
-            console.error("Error initializing phone input:", e);
-          }
-        }
-      }
-
-      // Initialize when DOM is ready
-      $(document).ready(function () {
-        initPhoneInput();
-      });
-
-      // Also try after library loads
-      window.addEventListener("load", function () {
-        if (!phoneInput) {
-          setTimeout(initPhoneInput, 100);
-        }
-      });
-
-      // Applicant Type Toggle
-      let selectedApplicantType = "company"; // Default to company
-
-      function selectApplicantType(type, event) {
-        if (event) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-
-        selectedApplicantType = type;
-        const buttons = document.querySelectorAll(".toggle-btn");
-        const hiddenInput = document.getElementById("applicantType");
-
-        // Remove active class from all buttons
-        buttons.forEach((btn) => {
-          btn.classList.remove("active");
-        });
-
-        // Add active class to selected button
-        const selectedButton = document.querySelector(`[data-type="${type}"]`);
-        if (selectedButton) {
-          selectedButton.classList.add("active");
-        }
-
-        // Update hidden input value
-        if (hiddenInput) {
-          hiddenInput.value = type;
-        }
-      }
-
-      // Ensure toggle works on page load
-      window.addEventListener("load", function () {
-        // Set default to company if not already set
-        const hiddenInput = document.getElementById("applicantType");
-        if (hiddenInput && hiddenInput.value === "company") {
-          selectApplicantType("company", null);
-        }
-      });
-
-      // Form Submission
-      function handleSubmit(event) {
-        event.preventDefault();
-
-        // Validate phone number
-        if (phoneInput && !phoneInput.isValidNumber()) {
-          alert("يرجى إدخال رقم هاتف صحيح");
-          return;
-        }
-
-        // Get form data
-        const formData = {
-          applicantType: selectedApplicantType,
-          fullName: document.getElementById("fullName").value,
-          email: document.getElementById("email").value,
-          phone: phoneInput
-            ? phoneInput.getNumber()
-            : document.getElementById("phone").value,
-          city: document.getElementById("city").value,
-        };
-
-        console.log("Form Data:", formData);
-
-        // Hide form and show success message
-        document.getElementById("franchise-form-element").style.display =
-          "none";
-        document.getElementById("success-message").style.display = "block";
-
-        // Here you would normally send the form data to a server
-        // For now, we just show the success message
-      }
-
-      // Show Form (for new form button)
-      function showForm() {
-        document.getElementById("success-message").style.display = "none";
-        document.getElementById("franchise-form-element").style.display =
-          "block";
-        document.getElementById("franchise-form-element").reset();
-        selectApplicantType("company", null);
-
-        // Reset phone input and ensure Saudi Arabia is selected
-        if (phoneInput) {
-          phoneInput.setNumber("");
-          phoneInput.setCountry("sa");
-
-          // Force update flag display
-          const phoneInputElement = document.getElementById("phone");
-          if (phoneInputElement) {
-            const flag =
-              phoneInputElement.parentElement.querySelector(".iti__flag");
-            if (flag) {
-              flag.className = "iti__flag iti__sa";
-              flag.style.backgroundImage =
-                "url('https://flagcdn.com/w20/sa.png')";
-            }
-          }
-
-          // Force set country again to ensure it doesn't change
-          setTimeout(function () {
-            phoneInput.setCountry("sa");
-            const flag =
-              phoneInputElement.parentElement.querySelector(".iti__flag");
-            if (flag) {
-              flag.className = "iti__flag iti__sa";
-              flag.style.backgroundImage =
-                "url('https://flagcdn.com/w20/sa.png')";
-            }
-          }, 100);
-        }
-      }
-
-      // Function to force update Saudi flag
-      function updateSaudiFlag() {
-        const phoneInputElement = document.getElementById("phone");
-        if (phoneInputElement && phoneInput) {
-          phoneInput.setCountry("sa");
-          const flag =
-            phoneInputElement.parentElement.querySelector(".iti__flag");
-          if (flag) {
-            flag.className = "iti__flag iti__sa";
-            flag.style.backgroundImage =
-              "url('https://flagcdn.com/w20/sa.png')";
-          }
-        }
-      }
-
-      // Listen for country change events to ensure Saudi flag stays
-      $(document).on("countrychange", "#phone", function () {
-        setTimeout(updateSaudiFlag, 50);
-      });
-    </script>
+    <script src="landing2.js"></script>
   </body>
 </html>

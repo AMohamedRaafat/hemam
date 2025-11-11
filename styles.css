@@ -2140,12 +2140,6 @@ body {
     text-align: start;
   }
 
-  .download-description {
-    font-size: 16px;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-
   .download-left {
     text-align: center;
     order: 1;
@@ -2235,7 +2229,7 @@ body {
 
   /* Franchise Form Section Responsive */
   .franchise-form-section {
-    padding: 0px 0 0px;
+    padding: 20px 0 0px;
   }
 
   .franchise-form-header {
