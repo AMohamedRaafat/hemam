@@ -177,10 +177,10 @@ body {
 .drawer-menu .icon-logo {
   vertical-align: middle;
   display: inline-block;
-  width: 1em;
-  height: 1em;
+  width: 60px;
+  height: 60px;
   mask: url("../assets/imgs/logo.svg") no-repeat center / contain;
-  background-color: currentColor;
+  background-color: #fff;
   content: "";
 }
 
@@ -825,6 +825,378 @@ body {
   padding: 40px 0;
 }
 
+/* Franchise Form Section */
+.franchise-form-section {
+  background: var(--white);
+  padding: 60px 0 100px;
+  min-height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative Background Pattern */
+.franchise-form-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.03) 2px,
+    transparent 2px
+  );
+  background-size: 40px 40px;
+  background-position: 0 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.franchise-form-header {
+  position: relative;
+  z-index: 1;
+  text-align: right;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.back-to-home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  color: var(--black);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  transition: all 0.3s;
+}
+
+.back-to-home-btn:hover {
+  background: #e8e8e8;
+  transform: translateX(-5px);
+}
+
+.back-to-home-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.franchise-form-title {
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--black);
+  margin-bottom: 15px;
+  text-align: right;
+}
+
+.franchise-form-description {
+  font-size: 18px;
+  color: var(--gray);
+  margin-bottom: 0;
+  line-height: 1.8;
+  text-align: right;
+}
+
+.franchise-form-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 20px;
+}
+
+.franchise-form-container {
+  border-radius: 24px;
+  padding: 40px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Applicant Type Toggle */
+.applicant-type-toggle {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  background: var(--white);
+  padding: 5px;
+  border-radius: 12px;
+}
+
+.toggle-btn {
+  padding: 12px 24px;
+  border: 2px solid transparent;
+  background: transparent;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.toggle-btn.active {
+  background: #fff5e9;
+  color: var(--primary-orange);
+  border-color: var(--primary-orange);
+}
+
+.toggle-btn:hover:not(.active) {
+  background: #f9f9f9;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #414651;
+  margin-bottom: 8px;
+  text-align: right;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  background: var(--white);
+  color: #414651;
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary-orange);
+  box-shadow: 0 0 0 3px rgba(255, 136, 46, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #999;
+}
+
+/* Phone Input with intl-tel-input */
+.form-group .iti {
+  width: 100%;
+  position: relative;
+  direction: ltr;
+}
+
+.form-group .iti input {
+  width: 100% !important;
+  padding: 14px 16px 14px 100px !important;
+  border: 2px solid #e0e0e0 !important;
+  border-radius: 12px !important;
+  direction: ltr;
+  text-align: right;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  box-sizing: border-box;
+  padding-left: 40px;
+}
+
+.form-group .iti input:focus {
+  outline: none;
+  border-color: var(--primary-orange) !important;
+  box-shadow: 0 0 0 3px rgba(255, 136, 46, 0.1);
+}
+
+/* Position flag container on the left side */
+.form-group .iti__flag-container {
+  left: 2px !important;
+  right: auto !important;
+  top: 50% !important;
+  transform: translateY(-50%);
+  cursor: default;
+  position: absolute !important;
+  z-index: 2;
+  display: block !important;
+  visibility: visible !important;
+}
+
+.form-group .iti__selected-flag {
+  padding: 8px 10px 8px 12px;
+  background: transparent;
+  border: none;
+  cursor: default;
+  display: flex !important;
+  align-items: center;
+  gap: 6px;
+  flex-direction: row;
+  width: auto !important;
+  height: auto !important;
+}
+
+.iti__selected-flag:focus {
+  outline: none;
+}
+
+.iti__selected-flag:hover {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+}
+
+/* Hide dropdown arrow when dropdown is disabled */
+.iti__arrow {
+  display: none !important;
+}
+.iti--separate-dial-code .iti__selected-flag {
+  background: transparent !important;
+}
+
+/* Ensure dial code is visible and styled */
+.form-group .iti__selected-dial-code {
+  color: #414651 !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  font-family: "IBM Plex Sans Arabic", sans-serif !important;
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  margin-left: 4px;
+  line-height: 1;
+}
+
+/* Ensure flag is visible */
+.form-group .iti__flag {
+  width: 20px !important;
+  height: 15px !important;
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  background-size: cover !important;
+  background-position: center !important;
+  flex-shrink: 0;
+}
+
+/* Force Saudi Arabia flag - override all flag styles */
+.form-group .iti__flag,
+.form-group .iti__flag.iti__sa,
+.form-group .iti__flag-box[data-country-code="sa"] .iti__flag,
+.form-group .iti__flag[class*="sa"] {
+  background-image: url("https://flagcdn.com/w20/sa.png") !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+/* Ensure flag box shows Saudi flag */
+.form-group .iti__flag-box .iti__flag {
+  background-image: url("https://flagcdn.com/w20/sa.png") !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+/* Ensure the flag box is visible */
+.form-group .iti__flag-box {
+  display: inline-block !important;
+  visibility: visible !important;
+  width: 20px !important;
+  height: 15px !important;
+}
+
+.iti__country-list {
+  direction: ltr;
+  text-align: left;
+  right: 0;
+  left: auto;
+  z-index: 9999;
+}
+
+/* Select Wrapper */
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 16px center;
+  cursor: pointer;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 40%;
+  padding: 16px;
+  background: var(--primary-orange);
+  color: var(--black);
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  position: absolute;
+  left: 60px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    left: 0;
+    position: relative;
+  }
+}
+
+.submit-btn:hover {
+  background: #e6771f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 136, 46, 0.4);
+}
+
+/* Success Message */
+.success-message {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.success-icon {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.success-text {
+  font-size: 18px;
+  color: var(--black);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.new-form-btn {
+  padding: 14px 32px;
+  background: var(--primary-orange);
+  color: var(--black);
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+
+.new-form-btn:hover {
+  background: #e6771f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 136, 46, 0.4);
+}
+
 .franchise-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1327,6 +1699,7 @@ body {
   color: var(--white);
   display: block;
   margin-bottom: 20px;
+  z-index: 3;
 }
 
 .footer-description {
@@ -1425,7 +1798,8 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 40px;
   align-items: center;
   position: relative;
   z-index: 2;
@@ -1857,6 +2231,92 @@ body {
   .drawer-menu {
     width: 100%;
     max-width: 100%;
+  }
+
+  /* Franchise Form Section Responsive */
+  .franchise-form-section {
+    padding: 0px 0 0px;
+  }
+
+  .franchise-form-header {
+    margin-bottom: 30px;
+  }
+
+  .franchise-form-title {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .franchise-form-description {
+    font-size: 16px;
+  }
+
+  .franchise-form-wrapper {
+    justify-content: center;
+    padding: 0 0px;
+  }
+
+  .franchise-form-container {
+    padding: 30px 0px;
+    max-width: 100%;
+  }
+
+  .back-to-home-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .applicant-type-toggle {
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+
+  .toggle-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+
+  .country-code {
+    width: 100px;
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  .success-message {
+    padding: 30px 15px;
+  }
+
+  .success-icon svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .success-text {
+    font-size: 16px;
+  }
+
+  .new-form-btn {
+    padding: 12px 24px;
+    font-size: 14px;
   }
 }
 
