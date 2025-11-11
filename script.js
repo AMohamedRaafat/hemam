@@ -151,13 +151,35 @@ $(document).ready(function () {
                 1024: {
                     items: 5,
                     center: true,
-                    stagePadding: 0
+                    stagePadding: 100
                 }
             },
             navText: [
-                '<svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>',
-                '<svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>'
-            ]
+                `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g g clip - path="url(#clip0_172_20255)" >
+<path d="M0.5 8H15.5" stroke="#0D0723" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.5 13L15.5 8L10.5 3" stroke="#0D0723" stroke-linecap="round" stroke-linejoin="round"/>
+</g >
+                <defs>
+                    <clipPath id="clip0_172_20255">
+                        <rect width="16" height="16" fill="white" transform="matrix(-1 0 0 1 16 0)" />
+                    </clipPath>
+                </defs>
+</svg >
+                `,
+                `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_172_20250)">
+<path d="M15.5 8H0.5" stroke="#0D0723" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5.5 13L0.5 8L5.5 3" stroke="#0D0723" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_172_20250">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+`]
         });
     }
 });

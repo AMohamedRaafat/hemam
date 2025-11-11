@@ -484,9 +484,6 @@
     <section id="franchise" class="franchise-section">
       <div class="container">
         <div class="franchise-content">
-          <div class="franchise-image">
-            <div class="franchise-overlay-icon">✓</div>
-          </div>
           <div class="franchise-text">
             <h2>الامتياز التجاري</h2>
             <p>
@@ -497,6 +494,85 @@
             </p>
             <button class="franchise-btn">احصل على الامتياز التجاري</button>
           </div>
+          <div class="franchise-image-wrapper">
+            <div class="franchise-image">
+              <img
+                src="./assets/imgs/franchise/hand-shake.jpg"
+                alt="Business Handshake"
+                class="franchise-main-image"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+              />
+              <div class="franchise-image-placeholder" style="display: none">
+                <svg
+                  width="100%"
+                  height="100%"
+                  viewBox="0 0 600 400"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <linearGradient
+                      id="franchiseGrad1"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
+                      <stop
+                        offset="0%"
+                        style="stop-color: #667eea; stop-opacity: 1"
+                      />
+                      <stop
+                        offset="100%"
+                        style="stop-color: #764ba2; stop-opacity: 1"
+                      />
+                    </linearGradient>
+                  </defs>
+                  <rect
+                    width="100%"
+                    height="100%"
+                    fill="url(#franchiseGrad1)"
+                  />
+                  <text
+                    x="50%"
+                    y="50%"
+                    font-size="24"
+                    fill="white"
+                    text-anchor="middle"
+                    dominant-baseline="middle"
+                    font-family="Arial"
+                  >
+                    Business Partnership
+                  </text>
+                </svg>
+              </div>
+            </div>
+            <!-- Rating Badge -->
+            <div class="franchise-rating-badge">
+              <div class="rating-stars">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+              </div>
+              <span class="rating-number">5.0</span>
+            </div>
+            <!-- Floating Icons -->
+            <div class="franchise-floating-icons">
+              <div class="floating-icon floating-icon-heart">
+                <img src="./assets/imgs/franchise/heart.svg" alt="Heart" />
+              </div>
+              <div class="floating-icon floating-icon-shield">
+                <img
+                  src="./assets/imgs/franchise/insurance1.svg"
+                  alt="Insurance"
+                />
+              </div>
+              <div class="floating-icon floating-icon-thumbsup">
+                <img src="./assets/imgs/franchise/like.svg" alt="Like" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -506,11 +582,15 @@
       <div class="container">
         <div class="download-content">
           <div class="download-left">
-            <h2 class="section-title text-right">
+            <h2 class="download-title">
               حمل تطبيق همم الآن واستمتع برحلات أسهل
             </h2>
+            <p class="download-description">
+              اكتشف تجربة نقل مريحة وآمنة مع تطبيق همم. احجز رحلتك بسهولة مع
+              سائقين محترفين ومركبات مجهزة خصيصاً لراحتك.
+            </p>
             <div class="download-buttons">
-              <a href="#" class="download-btn light">
+              <a href="#" class="download-btn">
                 <svg
                   class="download-icon"
                   fill="currentColor"
@@ -520,9 +600,12 @@
                     d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"
                   />
                 </svg>
-                <span>App Store</span>
+                <div class="download-btn-text">
+                  <span class="download-btn-label">احصل عليه من</span>
+                  <span class="download-btn-store">App Store</span>
+                </div>
               </a>
-              <a href="#" class="download-btn light">
+              <a href="#" class="download-btn">
                 <svg
                   class="download-icon"
                   viewBox="0 0 24 24"
@@ -532,23 +615,37 @@
                     d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"
                   />
                 </svg>
-                <span>Google Play</span>
+                <div class="download-btn-text">
+                  <span class="download-btn-label">احصل عليه من</span>
+                  <span class="download-btn-store">Google Play</span>
+                </div>
               </a>
             </div>
             <div class="download-features">
               <div class="download-feature">
-                <span class="feature-icon-small">💡</span>
+                <div class="feature-icon">💡</div>
                 <span>الابتكار أولاً</span>
               </div>
               <div class="download-feature">
-                <span class="feature-icon-small">🔄</span>
+                <div class="feature-icon">🔄</div>
                 <span>تحديثات حصرية</span>
               </div>
             </div>
           </div>
-          <div class="download-screenshot">
-            <div class="phone-frame-large">
-              <div class="phone-screen-large"></div>
+          <div class="download-visual">
+            <div class="download-phone-wrapper">
+              <img
+                src="./assets/imgs/download/phone.png"
+                alt="Hemam App Phone"
+                class="download-phone"
+              />
+              <div class="download-card-wrapper">
+                <img
+                  src="./assets/imgs/download/card.png"
+                  alt="Hemam Card"
+                  class="download-card"
+                />
+              </div>
             </div>
           </div>
         </div>

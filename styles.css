@@ -682,7 +682,7 @@ body {
 
 /* Partners Section */
 .partners-section {
-  background: var(--light-beige);
+  background: #fdfdfd;
   padding: 80px 0;
 }
 
@@ -721,7 +721,7 @@ body {
 
 /* Owl Carousel Navigation Buttons */
 .owl-nav {
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
   gap: 16px;
@@ -738,6 +738,8 @@ body {
   align-items: center !important;
   justify-content: center !important;
   transition: all 0.3s ease !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .owl-nav button:hover {
@@ -755,13 +757,29 @@ body {
 .owl-nav button.owl-prev,
 .owl-nav button.owl-next {
   position: static !important;
-  margin: 0 !important;
+  margin-top: 15px !important;
 }
 
-/* Hide navigation on desktop if not needed */
+/* Show navigation on desktop */
 @media (min-width: 1024px) {
   .owl-nav {
-    display: flex;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .owl-nav button {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Show navigation on tablet and mobile as well */
+@media (max-width: 1023px) {
+  .owl-nav {
+    display: flex !important;
+    visibility: visible !important;
   }
 }
 
@@ -803,170 +821,472 @@ body {
 
 /* Franchise Section */
 .franchise-section {
-  background: var(--light-beige);
-  padding: 80px 0;
+  background: var(--white);
+  padding: 40px 0;
 }
 
 .franchise-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 40px;
   align-items: center;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("./assets/imgs/franchise/bg-overlay.png") no-repeat center
+      center;
+    background-size: cover;
+    z-index: 1;
+  }
+}
+.franchise-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
 }
 
 .franchise-image {
   position: relative;
-  height: 400px;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"><rect fill="%23e0e0e0" width="600" height="400"/></svg>');
-  background-size: cover;
-  background-position: center;
-  border-radius: 16px;
+  width: 100%;
+  height: 350px;
+  border-radius: 24px;
   overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
-.franchise-overlay-icon {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  background: var(--primary-orange);
-  color: var(--white);
-  border-radius: 12px;
+.franchise-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+.franchise-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
-  font-weight: bold;
+  color: white;
+  font-size: 24px;
+}
+
+/* Rating Badge */
+.franchise-rating-badge {
+  position: absolute;
+  bottom: 50px;
+  left: -30px;
+  background: white;
+  padding: 10px 14px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  flex-direction: row-reverse;
+}
+
+.rating-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.rating-stars span {
+  color: #ffd700;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.rating-number {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+/* Floating Icons */
+.franchise-floating-icons {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 10;
+}
+
+.floating-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.floating-icon:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  animation-play-state: paused;
+}
+
+.floating-icon:hover svg {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.floating-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.floating-icon-heart {
+  animation: floatUpDown 3s ease-in-out infinite;
+  position: absolute;
+  width: 48px;
+  top: -80px;
+  right: -10px;
+}
+
+.floating-icon-shield {
+  animation: floatUpDown 3s ease-in-out infinite 0.5s;
+  position: absolute;
+  width: 95px;
+  bottom: -50px;
+  left: -120px;
+}
+
+.floating-icon-thumbsup {
+  animation: floatUpDown 3s ease-in-out infinite 1s;
+  position: absolute;
+  width: 48px;
+  bottom: -50px;
+  right: -50px;
+}
+
+@keyframes floatUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .franchise-text {
   text-align: right;
+  padding-left: 20px;
+  z-index: 2;
 }
 
 .franchise-text h2 {
-  font-size: 42px;
+  font-size: 38px;
   font-weight: 900;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   color: var(--black);
+  line-height: 1.2;
+  position: relative;
+  z-index: 2;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: 200px;
+    height: 120px;
+    background: url("./assets/imgs/franchise/shape-title.png") no-repeat center
+      center;
+    background-size: cover;
+    z-index: -1;
+  }
 }
 
 .franchise-text p {
-  font-size: 18px;
-  color: var(--gray);
-  line-height: 1.8;
-  margin-bottom: 30px;
+  font-size: 17px;
+  color: var(--black);
+  line-height: 1.7;
+  margin-bottom: 25px;
+  max-width: 100%;
+  z-index: 2;
 }
 
 .franchise-btn {
   background: var(--primary-orange);
-  color: var(--white);
+  color: var(--black);
   border: none;
-  padding: 18px 40px;
-  border-radius: 12px;
-  font-size: 18px;
+  padding: 16px 40px;
+  border-radius: 30px;
+  font-size: 17px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(255, 136, 46, 0.3);
 }
 
 .franchise-btn:hover {
   background: #e6771f;
   transform: translateY(-2px);
-  box-shadow: 0 5px 20px rgba(255, 136, 46, 0.3);
+  box-shadow: 0 6px 20px rgba(255, 136, 46, 0.4);
 }
 
 /* Download Section */
 .download-section {
-  background: var(--light-beige);
-  padding: 80px 0 120px;
+  background: linear-gradient(135deg, #f5f5f0 0%, #ffffff 50%, #f5f5f0 100%);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.download-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 20% 50%,
+    rgba(255, 136, 46, 0.05) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
 }
 
 .download-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 80px;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .download-left {
   text-align: right;
 }
 
-.download-screenshot {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.download-title {
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--black);
+  margin-bottom: 24px;
+  line-height: 1.3;
+  position: relative;
 }
 
-.phone-frame-large {
-  width: 280px;
-  height: 560px;
-  background: var(--black);
-  border-radius: 30px;
-  padding: 12px;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
-}
-
-.phone-screen-large {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 20px;
+.download-description {
+  font-size: 18px;
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 100%;
 }
 
 .download-buttons {
   display: flex;
-  gap: 20px;
-  justify-content: flex-end;
-  margin-bottom: 40px;
-  margin-top: 30px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 50px;
+  align-items: flex-end;
 }
 
 .download-btn {
-  background: var(--white);
-  color: var(--black);
-  padding: 15px 30px;
-  border-radius: 12px;
+  background: var(--black);
+  color: var(--white);
+  padding: 16px 28px;
+  border-radius: 16px;
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   font-weight: 600;
-  transition: all 0.3s;
-  border: 2px solid #e0e0e0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+  min-width: 240px;
+  justify-content: flex-end;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.download-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.download-btn:hover::before {
+  left: 100%;
 }
 
 .download-btn:hover {
+  background: var(--primary-orange);
+  color: var(--black);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(255, 136, 46, 0.4);
   border-color: var(--primary-orange);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .download-icon {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.download-btn:hover .download-icon {
+  transform: scale(1.1);
+}
+
+.download-btn-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.download-btn-label {
+  font-size: 12px;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+.download-btn-store {
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .download-features {
   display: flex;
   gap: 40px;
-  justify-content: center;
+  justify-content: flex-end;
   flex-wrap: wrap;
 }
 
 .download-feature {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-size: 16px;
   color: var(--black);
+  font-weight: 500;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
 }
 
-.feature-icon-small {
-  font-size: 20px;
+.download-feature:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: var(--white);
+}
+
+.feature-icon {
+  font-size: 24px;
+  line-height: 1;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 136, 46, 0.1);
+  border-radius: 50%;
+}
+
+/* Download Visual Section */
+.download-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 600px;
+}
+
+.download-phone-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.download-phone {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.3));
+  animation: floatPhone 6s ease-in-out infinite;
+  position: relative;
+  z-index: 2;
+}
+
+.download-card-wrapper {
+  position: absolute;
+  bottom: 10%;
+  left: -15%;
+  z-index: 3;
+  animation: floatCard 4s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.download-card {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.25));
+  transform: rotate(-15deg);
+  transition: transform 0.3s;
+}
+
+.download-card-wrapper:hover .download-card {
+  transform: rotate(-10deg) scale(1.05);
+}
+
+@keyframes floatPhone {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+}
+
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(-15deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(-12deg);
+  }
 }
 
 /* Footer */
@@ -1164,6 +1484,51 @@ body {
 
   .franchise-content {
     grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .franchise-image-wrapper {
+    order: -1;
+  }
+
+  .franchise-text {
+    order: 1;
+  }
+
+  .franchise-image {
+    height: auto;
+    min-height: 250px;
+    aspect-ratio: 4 / 3;
+  }
+
+  /* Floating icons are handled in the 768px media query */
+  .floating-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .franchise-rating-badge {
+    bottom: 15px;
+    left: -20px !important;
+    padding: 10px 14px;
+  }
+
+  .franchise-text h2 {
+    font-size: 36px;
+  }
+
+  .franchise-text {
+    padding-left: 0;
+  }
+
+  .franchise-image-wrapper {
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .franchise-section {
+    padding: 40px 0;
+    overflow: hidden;
   }
 
   .footer-content {
@@ -1174,6 +1539,23 @@ body {
     div {
       width: 100% !important;
     }
+  }
+}
+
+/* Ensure navigation buttons are visible on desktop */
+@media (min-width: 1025px) {
+  .nav-links {
+    display: flex !important;
+    visibility: visible !important;
+  }
+
+  .nav-cta-btn {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .menu-toggle {
+    display: none !important;
   }
 }
 
@@ -1219,6 +1601,180 @@ body {
 
   .franchise-text h2 {
     font-size: 32px;
+  }
+
+  .download-section {
+    padding: 40px 0;
+  }
+
+  .download-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .download-title {
+    font-size: 28px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .download-description {
+    font-size: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .download-left {
+    text-align: center;
+  }
+
+  .download-buttons {
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .download-btn {
+    min-width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    padding: 14px 24px;
+  }
+
+  .download-btn-text {
+    align-items: center;
+  }
+
+  .download-features {
+    justify-content: center;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .download-feature {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+
+  .download-visual {
+    min-height: 350px;
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  .download-left {
+    order: 1;
+  }
+
+  .download-phone-wrapper {
+    max-width: 100%;
+  }
+
+  .download-phone {
+    max-width: 220px;
+    animation: none;
+  }
+
+  .download-card-wrapper {
+    bottom: 8%;
+    left: -5%;
+    animation: none;
+  }
+
+  .download-card {
+    width: 110px;
+    transform: rotate(-12deg);
+  }
+
+  /* Hide rating badge and bg-overlay on phone screens */
+  .franchise-rating-badge {
+    display: none !important;
+  }
+
+  .franchise-content::before {
+    display: none !important;
+  }
+
+  /* Adjust floating icons for mobile - position at bottom left of image */
+  .franchise-image-wrapper {
+    order: -1 !important;
+    position: relative;
+  }
+
+  .franchise-text {
+    order: 1 !important;
+  }
+
+  .franchise-floating-icons {
+    position: absolute !important;
+    bottom: 0%;
+    left: 3%;
+    right: auto !important;
+    top: auto !important;
+    transform: none !important;
+    flex-direction: column;
+    gap: 2.5%;
+    z-index: 10;
+    display: flex !important;
+    width: auto;
+    height: auto;
+  }
+
+  .floating-icon-heart {
+    background-color: white;
+    position: absolute !important;
+    width: 16% !important;
+    height: 16% !important;
+    min-width: 35px;
+    min-height: 35px;
+    max-width: 55px;
+    max-height: 55px;
+    bottom: 0% !important;
+    right: -20px !important;
+    margin: 0;
+    animation: none !important;
+  }
+
+  .floating-icon-shield {
+    position: absolute !important;
+    background-color: transparent;
+    width: 30% !important;
+    height: 30% !important;
+    min-width: 65px;
+    min-height: 65px;
+    max-width: 200px;
+    max-height: 200px;
+    bottom: -10px !important;
+    left: 15px !important;
+    margin: 0;
+    animation: none !important;
+  }
+
+  .floating-icon-thumbsup {
+    position: absolute !important;
+    background-color: transparent;
+    width: 12% !important;
+    height: 12% !important;
+    min-width: 28px;
+    min-height: 28px;
+    max-width: 48px;
+    max-height: 48px;
+    bottom: 12px !important;
+    right: -10px !important;
+    margin: 0;
+    animation: none !important;
+  }
+
+  .floating-icon {
+    margin: 0;
+    animation: none !important;
+  }
+
+  .floating-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   .hero-bottom {
@@ -1272,12 +1828,69 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .download-content {
-    grid-template-columns: 1fr;
+  .download-section {
+    padding: 60px 0;
   }
 
-  .download-screenshot {
-    margin-top: 40px;
+  .download-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .download-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .download-description {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .download-buttons {
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .download-btn {
+    min-width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+
+  .download-btn-text {
+    align-items: center;
+  }
+
+  .download-features {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .download-visual {
+    min-height: 400px;
+    order: -1;
+  }
+
+  .download-left {
+    order: 1;
+  }
+
+  .download-phone-wrapper {
+    max-width: 100%;
+  }
+
+  .download-phone {
+    max-width: 260px;
+  }
+
+  .download-card-wrapper {
+    bottom: 5%;
+    left: -10%;
+  }
+
+  .download-card {
+    width: 140px;
   }
 
   .footer-contact-grid {
