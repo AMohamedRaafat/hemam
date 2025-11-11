@@ -88,7 +88,7 @@ function highlightNavLink() {
 
 window.addEventListener('scroll', highlightNavLink);
 
-// Animation on scroll
+// Animation on scroll - Enhanced for all elements
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -97,15 +97,18 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
+            entry.target.classList.add('show');
             entry.target.style.opacity = '1';
             entry.target.style.transform = 'translateY(0)';
         }
     });
 }, observerOptions);
 
-// Observe elements for animation
+// Observe elements for animation - All sections and elements
 document.addEventListener('DOMContentLoaded', () => {
-    const animateElements = document.querySelectorAll('.why-card, .service-item, .step, .partner-logo');
+    const animateElements = document.querySelectorAll(
+        '.why-card, .service-item, .step, .partner-logo, .why-section, .services-section, .how-section, .partners-section, .franchise-section, .download-section, .footer, .hero-section, .section-title, .why-header, .why-image-container, .download-content, .download-left, .download-visual, .franchise-content, .franchise-text, .franchise-image-wrapper, .contact-item, .footer-top, .social-icons'
+    );
 
     animateElements.forEach(el => {
         el.style.opacity = '0';

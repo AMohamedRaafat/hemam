@@ -1024,9 +1024,9 @@ body {
   background: var(--primary-orange);
   color: var(--black);
   border: none;
-  padding: 16px 40px;
+  padding: 10px 20px;
   border-radius: 30px;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s;
@@ -1048,18 +1048,34 @@ body {
 }
 
 .download-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(
-    circle at 20% 50%,
-    rgba(255, 136, 46, 0.05) 0%,
-    transparent 50%
-  );
-  pointer-events: none;
+  @media screen and (min-width: 768px) {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: -20px;
+    background-image: url("./assets/imgs/download/float-play.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+    z-index: 1;
+  }
+}
+.download-section::after {
+  @media screen and (min-width: 768px) {
+    content: "";
+    position: absolute;
+    bottom: 30%;
+    right: 0px;
+    background-image: url("./assets/imgs/download/float-app-store.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 150px;
+    z-index: 1;
+  }
 }
 
 .download-content {
@@ -1071,80 +1087,41 @@ body {
   z-index: 1;
 }
 
-.download-left {
-  text-align: right;
-}
-
 .download-title {
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 900;
-  color: var(--black);
+  color: #1f1f1f;
   margin-bottom: 24px;
   line-height: 1.3;
-  position: relative;
-}
-
-.download-description {
-  font-size: 18px;
-  color: var(--gray);
-  line-height: 1.8;
-  margin-bottom: 40px;
-  max-width: 100%;
+  text-align: start;
 }
 
 .download-buttons {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  flex-direction: row;
+  gap: 10px;
   margin-bottom: 50px;
   align-items: flex-end;
 }
 
 .download-btn {
-  background: var(--black);
-  color: var(--white);
-  padding: 16px 28px;
+  background: var(--white);
+  color: var(--black);
+  padding: 10px 20px;
   border-radius: 16px;
-  text-decoration: none;
   display: flex;
   align-items: center;
   gap: 16px;
   font-weight: 600;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border: 2px solid transparent;
-  min-width: 240px;
-  justify-content: flex-end;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  position: relative;
-  overflow: hidden;
-}
-
-.download-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
-  transition: left 0.5s;
-}
-
-.download-btn:hover::before {
-  left: 100%;
-}
-
-.download-btn:hover {
-  background: var(--primary-orange);
-  color: var(--black);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(255, 136, 46, 0.4);
-  border-color: var(--primary-orange);
+  justify-content: center;
+  font-size: 16px;
+  width: 25%;
+  transition: all 0.3s;
+  &:hover {
+    border: 2px solid var(--primary-orange);
+  }
 }
 
 .download-icon {
@@ -1154,83 +1131,98 @@ body {
   transition: transform 0.3s;
 }
 
-.download-btn:hover .download-icon {
-  transform: scale(1.1);
-}
-
 .download-btn-text {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 2px;
 }
 
 .download-btn-label {
-  font-size: 12px;
+  font-size: 10px;
   opacity: 0.9;
   font-weight: 400;
 }
 
 .download-btn-store {
-  font-size: 18px;
+  font-size: 10px;
   font-weight: 700;
+  text-align: start;
 }
 
 .download-features {
   display: flex;
-  gap: 40px;
-  justify-content: flex-end;
+  justify-content: flex-start;
   flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    width: 80%;
+    border-top: 1px solid #afb8d3;
+    border-bottom: 1px solid #afb8d3;
+  }
 }
 
 .download-feature {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
   font-size: 16px;
   color: var(--black);
   font-weight: 500;
   padding: 12px 20px;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: all 0.3s;
-}
-
-.download-feature:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background: var(--white);
+  padding: 20px 20px;
+  width: 100% !important;
+  text-align: start;
+  span {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  p {
+    font-size: 12px;
+    color: #5a5a5a;
+  }
+  @media screen and (min-width: 768px) {
+    width: 50% !important;
+    &:first-child {
+      border-left: 1px solid #afb8d3 !important;
+    }
+    &:hover {
+      background: var(--white) !important;
+    }
+  }
 }
 
 .feature-icon {
-  font-size: 24px;
-  line-height: 1;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 136, 46, 0.1);
-  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }
-
+.download-section {
+  background-image: url("./assets/imgs/download/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 /* Download Visual Section */
 .download-visual {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   min-height: 600px;
+  background-color: #fff5e9 !important;
+  border-radius: 10%;
 }
 
 .download-phone-wrapper {
   position: relative;
   width: 100%;
   max-width: 400px;
-  height: auto;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1238,30 +1230,26 @@ body {
 
 .download-phone {
   width: 100%;
-  max-width: 320px;
   height: auto;
-  object-fit: contain;
   filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.3));
-  animation: floatPhone 6s ease-in-out infinite;
-  position: relative;
+
+  object-fit: contain;
+  position: absolute;
+  bottom: 0%;
   z-index: 2;
 }
 
 .download-card-wrapper {
   position: absolute;
-  bottom: 10%;
-  left: -15%;
+  bottom: 30%;
+  left: -10%;
   z-index: 3;
-  animation: floatCard 4s ease-in-out infinite;
-  animation-delay: 1s;
 }
 
 .download-card {
   width: 180px;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.25));
-  transform: rotate(-15deg);
   transition: transform 0.3s;
 }
 
@@ -1299,16 +1287,19 @@ body {
   overflow: hidden;
 }
 
-/* Concave curve at the top */
+/* Curved top border using SVG wave */
 .footer::before {
   content: "";
   position: absolute;
-  top: -100px;
+  top: -80px;
   left: 0;
   right: 0;
-  height: 100px;
+  height: 80px;
   background: var(--black);
-  border-radius: 0 0 200px 200px / 0 0 100px 100px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'%3E%3Cpath d='M0,80 L0,0 L1440,0 L1440,80 Q720,50 0,80 Z' fill='%23000000'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
   z-index: 1;
 }
 
@@ -1345,9 +1336,9 @@ body {
 }
 
 .social-icon {
-  width: 40px;
-  height: 40px;
-  background: transparent;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-orange);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1377,22 +1368,24 @@ body {
 }
 
 .contact-item {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  gap: 10px 15px;
+  align-items: start;
+  text-align: right;
 }
 
 .contact-icon-box {
+  grid-row: 1 / 3;
   width: 50px;
   height: 50px;
   background: var(--primary-orange);
-  border-radius: 8px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
+  flex-shrink: 0;
 }
 
 .contact-icon-box svg {
@@ -1402,22 +1395,28 @@ body {
 }
 
 .contact-item h4 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin: 0;
   color: var(--white);
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .contact-item p {
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
   margin: 0;
+  grid-column: 2;
+  grid-row: 2;
 }
 
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 30px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
   z-index: 2;
 }
@@ -1425,7 +1424,7 @@ body {
 .footer-links {
   color: rgba(255, 255, 255, 0.8);
   font-size: 14px;
-  margin-bottom: 10px;
+  margin: 0;
 }
 
 .footer-links a {
@@ -1440,7 +1439,7 @@ body {
 
 .copyright {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.8);
   margin: 0;
 }
 
@@ -1484,7 +1483,7 @@ body {
 
   .franchise-content {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 10px;
   }
 
   .franchise-image-wrapper {
@@ -1561,30 +1560,48 @@ body {
 
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 28px;
+    text-align: start;
+    font-size: 32px;
+    margin-bottom: 15px;
   }
 
   .hero-description {
     font-size: 16px;
   }
+
   .hero-content {
     padding: 0;
   }
+
   .hero-app-buttons {
     width: 100% !important;
     div {
       width: 100% !important;
     }
   }
+
   .hero-bottom {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    width: 100%;
+    flex-direction: column !important;
+    padding: 0 0px;
   }
+
   .section-title {
     font-size: 28px;
   }
 
   .why-cards {
     grid-template-columns: 1fr;
+  }
+
+  .why-header {
+    grid-template-columns: 1fr;
+  }
+
+  .why-image-placeholder {
+    height: 300px;
   }
 
   .services-grid {
@@ -1601,90 +1618,6 @@ body {
 
   .franchise-text h2 {
     font-size: 32px;
-  }
-
-  .download-section {
-    padding: 40px 0;
-  }
-
-  .download-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .download-title {
-    font-size: 28px;
-    margin-bottom: 16px;
-    text-align: center;
-  }
-
-  .download-description {
-    font-size: 15px;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-
-  .download-left {
-    text-align: center;
-  }
-
-  .download-buttons {
-    align-items: center;
-    margin-bottom: 30px;
-  }
-
-  .download-btn {
-    min-width: 100%;
-    max-width: 100%;
-    justify-content: center;
-    padding: 14px 24px;
-  }
-
-  .download-btn-text {
-    align-items: center;
-  }
-
-  .download-features {
-    justify-content: center;
-    gap: 15px;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .download-feature {
-    width: 100%;
-    max-width: 280px;
-    justify-content: center;
-  }
-
-  .download-visual {
-    min-height: 350px;
-    order: -1;
-    margin-bottom: 20px;
-  }
-
-  .download-left {
-    order: 1;
-  }
-
-  .download-phone-wrapper {
-    max-width: 100%;
-  }
-
-  .download-phone {
-    max-width: 220px;
-    animation: none;
-  }
-
-  .download-card-wrapper {
-    bottom: 8%;
-    left: -5%;
-    animation: none;
-  }
-
-  .download-card {
-    width: 110px;
-    transform: rotate(-12deg);
   }
 
   /* Hide rating badge and bg-overlay on phone screens */
@@ -1777,32 +1710,23 @@ body {
     object-fit: contain;
   }
 
-  .hero-bottom {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    width: 100%;
-    flex-direction: column;
-    padding: 0 0px;
-  }
   .navbar {
     border-bottom: none;
   }
+
   .nav-container {
     padding: 0 20px;
     .nav-logo .icon-logo {
       border-left: none;
     }
   }
+
   .hero-service-title {
     text-align: start;
     color: var(--primary-orange);
     font-size: 16px;
   }
-  .hero-title {
-    text-align: start;
-    font-size: 32px;
-    margin-bottom: 15px;
-  }
+
   .hero-text {
     text-align: start;
     font-size: 18px;
@@ -1810,26 +1734,15 @@ body {
     margin-bottom: 20px;
     display: block;
   }
+
   .hero-features {
     flex-direction: column;
-  }
-  .hero-bottom {
-    flex-direction: column !important;
-  }
-  .why-header {
-    grid-template-columns: 1fr;
-  }
-
-  .why-image-placeholder {
-    height: 300px;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
   }
 
   .download-section {
     padding: 60px 0;
+    background-image: none !important;
+    background-color: #fff !important;
   }
 
   .download-content {
@@ -1838,13 +1751,20 @@ body {
   }
 
   .download-title {
-    font-size: 36px;
+    font-size: 28px;
     margin-bottom: 20px;
+    text-align: start;
   }
 
   .download-description {
     font-size: 16px;
     margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .download-left {
+    text-align: center;
+    order: 1;
   }
 
   .download-buttons {
@@ -1853,40 +1773,38 @@ body {
   }
 
   .download-btn {
-    min-width: 100%;
-    max-width: 280px;
     justify-content: center;
-  }
-
-  .download-btn-text {
-    align-items: center;
+    width: auto;
   }
 
   .download-features {
     justify-content: center;
     gap: 20px;
+    flex-direction: column;
+    align-items: center;
   }
 
   .download-visual {
+    border-radius: 20%;
     min-height: 400px;
-    order: -1;
-  }
-
-  .download-left {
-    order: 1;
+    order: 2;
+    overflow: hidden !important;
+    margin-bottom: 20px;
   }
 
   .download-phone-wrapper {
     max-width: 100%;
+    justify-content: flex-start;
   }
 
   .download-phone {
-    max-width: 260px;
+    width: 340px !important;
   }
 
   .download-card-wrapper {
-    bottom: 5%;
-    left: -10%;
+    top: 33% !important;
+    left: 5% !important;
+    animation: none;
   }
 
   .download-card {
@@ -1898,9 +1816,15 @@ body {
     gap: 30px;
   }
 
+  .contact-item {
+    grid-template-columns: auto 1fr;
+    text-align: right;
+  }
+
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+    gap: 15px;
   }
 
   .footer-logo-text {
@@ -1909,6 +1833,15 @@ body {
 
   .footer-description {
     font-size: 14px;
+  }
+
+  .social-icons {
+    gap: 15px;
+  }
+
+  .social-icon {
+    width: 45px;
+    height: 45px;
   }
 
   .drawer-menu {
@@ -1963,13 +1896,14 @@ body {
   }
 
   .download-buttons {
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
   }
 
   .download-btn {
-    width: 100%;
     justify-content: center;
+    gap: 10px;
+    width: auto;
   }
 
   .phone-frame-large {
