@@ -142,20 +142,62 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Testimonial Navigation (if needed)
-const testimonialPrev = document.querySelector(".nav-arrow-prev");
-const testimonialNext = document.querySelector(".nav-arrow-next");
-
-if (testimonialPrev && testimonialNext) {
-  // This can be extended to implement testimonial carousel functionality
-  testimonialPrev.addEventListener("click", () => {
-    console.log("Previous testimonial");
-    // Add carousel logic here if needed
-  });
-
-  testimonialNext.addEventListener("click", () => {
-    console.log("Next testimonial");
-    // Add carousel logic here if needed
-  });
-}
+// Testimonials Carousel Functionality with Owl Carousel
+$(document).ready(function () {
+  if ($("#testimonialsCarousel").length) {
+    $("#testimonialsCarousel").owlCarousel({
+      loop: true,
+      margin: 24,
+      nav: true,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      mouseDrag: true,
+      touchDrag: true,
+      pullDrag: true,
+      freeDrag: false,
+      stagePadding: 0,
+      rtl: true, // RTL support for Arabic
+      responsive: {
+        0: {
+          items: 1,
+          center: true,
+        },
+        768: {
+          items: 1,
+          center: true,
+        },
+        1024: {
+          items: 1,
+          center: true,
+        },
+      },
+      navText: [
+        `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_172_20255)">
+            <path d="M0.5 8H15.5" stroke="#0D0723" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10.5 13L15.5 8L10.5 3" stroke="#0D0723" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_172_20255">
+              <rect width="16" height="16" fill="white" transform="matrix(-1 0 0 1 16 0)" />
+            </clipPath>
+          </defs>
+        </svg>`,
+        `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_172_20250)">
+            <path d="M15.5 8H0.5" stroke="#0D0723" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.5 13L0.5 8L5.5 3" stroke="#0D0723" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_172_20250">
+              <rect width="16" height="16" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>`,
+      ],
+    });
+  }
+});
 
