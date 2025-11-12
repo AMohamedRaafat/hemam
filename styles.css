@@ -909,14 +909,14 @@ body {
   z-index: 1;
   display: flex;
   justify-content: flex-start;
+  background-color: #fbfbfb;
   padding: 0 20px;
 }
 
 .franchise-form-container {
   border-radius: 24px;
-  padding: 40px;
+  padding: 80px 20px;
   width: 100%;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 /* Applicant Type Toggle */
@@ -924,7 +924,7 @@ body {
   display: flex;
   gap: 15px;
   margin-bottom: 30px;
-  background: var(--white);
+  background: transparent;
   padding: 5px;
   border-radius: 12px;
 }
@@ -932,7 +932,7 @@ body {
 .toggle-btn {
   padding: 12px 24px;
   border: 2px solid transparent;
-  background: transparent;
+  background: white;
   border-radius: 8px;
   font-size: 16px;
   font-weight: 600;
@@ -2251,7 +2251,7 @@ body {
   }
 
   .franchise-form-container {
-    padding: 30px 0px;
+    padding: 30px 20px;
     max-width: 100%;
   }
 
