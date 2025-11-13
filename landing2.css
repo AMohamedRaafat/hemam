@@ -115,7 +115,7 @@ body * {
   display: inline-block;
   width: 1em;
   height: 1em;
-  mask: url("../assets/imgs/logo.svg") no-repeat center / contain;
+  mask: url("./assets/imgs/logo.svg") no-repeat center / contain;
   background-color: currentColor;
   content: "";
 }
@@ -228,7 +228,7 @@ body * {
   display: inline-block;
   width: 48px;
   height: 48px;
-  mask: url("../assets/imgs/logo.svg") no-repeat center / contain;
+  mask: url("./assets/imgs/logo.svg") no-repeat center / contain;
   background-color: currentColor;
   content: "";
 }
@@ -925,7 +925,7 @@ body * {
 .icon-logo {
   width: 48px;
   height: 75px;
-  mask: url("../assets/imgs/logo.svg") no-repeat center / contain;
+  mask: url("./assets/imgs/logo.svg") no-repeat center / contain;
   background-color: white;
   display: block;
 }
