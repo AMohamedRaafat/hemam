@@ -35,8 +35,7 @@ body * {
 
 /* Header Container */
 .header-container {
-  background: var(--dark-gray);
-  background-image: #121212;
+  background-color: #121212;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -69,7 +68,7 @@ body * {
     right: 0;
     bottom: 0;
     background-image: url("./assets/imgs/header-driver/elipse.png");
-    background-size: 50%;
+    background-size: 75%;
     background-position: left center;
     background-repeat: no-repeat;
     opacity: 0.5;
@@ -434,7 +433,7 @@ body * {
 }
 
 .feature-card {
-  background: var(--white);
+  background: #fafafa;
   padding: 40px 30px;
   border-radius: 16px;
   text-align: right;
@@ -448,7 +447,7 @@ body * {
 
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 20px #e6e5e5;
 }
 
 .feature-icon,
@@ -505,7 +504,7 @@ body * {
 .bg-how-section > div {
   padding: 10px;
   overflow: hidden !important;
-  background-color: linear-gradient(to right, var(--light-beige) 0%, #fff 80%);
+  background-color: #fafafa !important;
   border: 1px solid var(--primary-orange) !important;
   border-right: transparent !important;
   border-radius: 40px;
@@ -595,7 +594,7 @@ body * {
   margin: 0 15px;
   position: relative;
   display: flex;
-  gap: 20px;
+  gap: 50px;
   @media screen and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
@@ -606,7 +605,7 @@ body * {
   .testimonial-img {
     z-index: 10;
     position: relative;
-    width: 30% !important;
+    width: 33% !important;
     border-radius: 50%;
     @media screen and (max-width: 768px) {
       width: 100% !important;
@@ -676,7 +675,10 @@ body * {
 
 .author-info h4 {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 500;
+  @media screen and (min-width: 768px) {
+    font-weight: 700;
+  }
   color: var(--black);
   margin-bottom: 5px;
 }
@@ -915,11 +917,26 @@ body * {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center !important;
   gap: 10px;
   background: var(--primary-orange);
-  padding: 20px;
-  border-radius: 20px;
-  min-width: 100px;
+  width: 160px !important;
+  @media screen and (min-width: 768px) {
+    width: 73px !important;
+  }
+
+  height: 73px !important;
+  border-radius: 17px !important;
+  box-shadow: 0px 1px 2px 0px rgba(10, 13, 18, 0.05);
+
+  box-shadow: 0px -2px 0px 0px rgba(10, 13, 18, 0.05) inset;
+
+  box-shadow: 0px 0px 0px 1px rgba(10, 13, 18, 0.05) inset;
+
+  span {
+    width: 41px !important;
+    height: 51px !important;
+  }
 }
 
 .icon-logo {
@@ -1290,10 +1307,6 @@ body * {
     height: 40px;
   }
 
-  .hero-text {
-    font-size: 14px;
-  }
-
   .hero-app-buttons {
     width: 100%;
   }
@@ -1320,10 +1333,10 @@ body * {
   }
   .step-card {
     h3 {
-      font-size: 17px;
+      font-size: 20px;
     }
     p {
-      font-size: 15px;
+      font-size: 16px;
     }
   }
   .testimonial-card {
