@@ -247,39 +247,47 @@
                 alt="Professional Drivers"
               />
             </div>
-            <h3>سائقون محترفون</h3>
-            <hr class="w-full border-t border-gray-200" />
-            <p>مدربون على التعامل باحترام واحترافية</p>
+            <div>
+              <h3>سائقون محترفون</h3>
+              <hr class="w-full border-t border-gray-200" />
+              <p>مدربون على التعامل باحترام واحترافية</p>
+            </div>
           </div>
           <div class="why-card">
             <div class="why-icon">
               <img src="./assets/imgs/why/safe.svg" alt="Safe and Trusted" />
             </div>
-            <h3>آمن وموثوق</h3>
-            <hr class="w-full border-t border-gray-200" />
-            <p>نظام تتبع للرحلات وتشمل تتبع الوصول للقدر</p>
+            <div>
+              <h3>آمن وموثوق</h3>
+              <hr class="w-full border-t border-gray-200" />
+              <p>نظام تتبع للرحلات وتشمل تتبع الوصول للقدر</p>
+            </div>
           </div>
           <div class="why-card">
             <div class="why-icon">
               <img src="./assets/imgs/why/reserved.svg" alt="Easy Booking" />
             </div>
-            <h3>حجز سهل</h3>
-            <hr class="w-full border-t border-gray-200" />
-            <p>واجهة بسيطة تسمح لك بطلب رحلة خلال ثوان</p>
+            <div>
+              <h3>حجز سهل</h3>
+              <hr class="w-full border-t border-gray-200" />
+              <p>واجهة بسيطة تسمح لك بطلب رحلة خلال ثوان</p>
+            </div>
           </div>
           <div class="why-card">
             <div class="why-icon">
               <img src="./assets/imgs/why/car.svg" alt="Equipped Vehicles" />
             </div>
-            <h3>مركبات مجهزة</h3>
-            <hr class="w-full border-t border-gray-200" />
-            <p>دعم الكراسي المتحركة وتجهيزات مناسبة لذوي الهمم</p>
+            <div>
+              <h3>مركبات مجهزة</h3>
+              <hr class="w-full border-t border-gray-200" />
+              <p>دعم الكراسي المتحركة وتجهيزات مناسبة لذوي الهمم</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section
     <section id="services" class="services-section">
       <div class="container">
         <h2 class="section-title text-center">خدمات همم</h2>
@@ -322,7 +330,141 @@
           </div>
         </div>
       </div>
+    </section> -->
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+      <button
+        id="signup-btn"
+        class="bg-[#FF882E] hover:bg-[#FF882E]/80 transition flex items-center gap-8 text-white py-2 px-8 rounded-full scroll-animate scale-in"
+      >
+        <img src="./assets/imgs/fire.svg" alt="Fire" />
+        <span class="text-[12px] md:text-[14px] font-semibold text-white"
+          >سجلي معنا لتصلك العروض</span
+        >
+      </button>
     </section>
+    <!-- Registration Modal -->
+    <div class="modal-overlay" id="registration-overlay">
+      <div
+        class="registration-modal border-t-4 md:border-4 border-[#ff882e]"
+        id="registration-modal"
+      >
+        <button class="modal-close" id="close-registration">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-illustration">
+          <img src="../assets/imgs/modals/like.svg" alt="Modal Send" />
+        </div>
+        <h2 class="modal-title">سجلي لتصلك أحدث العروض</h2>
+        <p class="modal-description">
+          املئي بياناتك لتصبحي ضمن قائمة عملائنا وتحصلين على أفضل الخصومات
+          والعروض أولًا بأول.
+        </p>
+        <form id="registration-form" class="modal-form">
+          <div class="form-group">
+            <label for="phone-number">رقم الهاتف</label>
+            <div class="phone-input-wrapper">
+              <div class="country-code">
+                <span class="saudi-flag"
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_272_15313)">
+                      <path
+                        d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
+                        fill="#6DA544"
+                      />
+                      <path
+                        d="M6.78125 14.3477C6.78125 15.2121 7.48203 15.9129 8.34645 15.9129H13.0421C13.0421 16.6332 13.6261 17.2172 14.3465 17.2172H15.9117C16.632 17.2172 17.216 16.6332 17.216 15.9129V14.3477H6.78125Z"
+                        fill="#F0F0F0"
+                      />
+                      <path
+                        d="M17.3462 6.7832V10.4354C17.3462 11.0108 16.8781 11.4789 16.3027 11.4789V13.0441C17.7412 13.0441 18.9114 11.8738 18.9114 10.4354V6.7832H17.3462Z"
+                        fill="#F0F0F0"
+                      />
+                      <path
+                        d="M6.12942 10.4354C6.12942 11.0108 5.66133 11.4789 5.08594 11.4789V13.0441C6.52439 13.0441 7.69462 11.8738 7.69462 10.4354V6.7832H6.12942V10.4354Z"
+                        fill="#F0F0F0"
+                      />
+                      <path
+                        d="M16.5652 6.7832H15V10.4354H16.5652V6.7832Z"
+                        fill="#F0F0F0"
+                      />
+                      <path
+                        d="M12.6505 8.87017C12.6505 9.01403 12.5334 9.13103 12.3896 9.13103C12.2458 9.13103 12.1287 9.01398 12.1287 8.87017V6.7832H10.5635V8.87017C10.5635 9.01403 10.4465 9.13103 10.3027 9.13103C10.1589 9.13103 10.0418 9.01398 10.0418 8.87017V6.7832H8.47656V8.87017C8.47656 9.87709 9.29575 10.6963 10.3027 10.6963C10.6905 10.6963 11.0501 10.5744 11.3462 10.3674C11.6422 10.5744 12.0019 10.6963 12.3896 10.6963C12.4677 10.6963 12.5445 10.6908 12.62 10.6812C12.5091 11.1382 12.0976 11.4789 11.607 11.4789V13.0441C13.0455 13.0441 14.2157 11.8738 14.2157 10.4354V8.87017V6.7832H12.6505V8.87017H12.6505Z"
+                        fill="#F0F0F0"
+                      />
+                      <path
+                        d="M10.8244 11.4785H8.47656V13.0437H10.8244V11.4785Z"
+                        fill="#F0F0F0"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_272_15313">
+                        <rect width="24" height="24" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+                <span>+966</span>
+              </div>
+              <input
+                type="tel"
+                id="phone-number"
+                name="phone"
+                placeholder="000000000"
+                maxlength="9"
+                required
+              />
+            </div>
+            <span class="error-message" id="phone-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="city">المدينة</label>
+            <select id="city" name="city">
+              <option value="">اختر المدينة</option>
+              <option value="riyadh">الرياض</option>
+              <option value="jeddah">جدة</option>
+              <option value="dammam">الدمام</option>
+              <option value="khobar">الخبر</option>
+              <option value="makkah">مكة المكرمة</option>
+              <option value="madinah">المدينة المنورة</option>
+              <option value="taif">الطائف</option>
+              <option value="abha">أبها</option>
+              <option value="tabuk">تبوك</option>
+              <option value="buraidah">بريدة</option>
+              <option value="khamis">خميس مشيط</option>
+              <option value="hail">حائل</option>
+            </select>
+          </div>
+          <button type="submit" class="submit-btn">ارسال</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="success-overlay">
+      <div class="success-modal border-4 border-[#ff882e]" id="success-modal">
+        <button class="modal-close" id="close-success">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="success-illustration">
+          <img src="../assets/imgs/modals/success.svg" alt="Success" />
+        </div>
+        <h2 class="success-title">
+          <span class="confetti">🎉</span>
+          شكرًا لك!
+        </h2>
+        <p class="success-message">تم تسجيلك بنجاح.</p>
+        <p class="success-description">
+          ستصلك عروض وخصومات حصرية مخصّصة لك فور توفرها.
+        </p>
+      </div>
+    </div>
 
     <!-- How to Start Section -->
     <section id="how-to-start" class="how-section">
@@ -748,17 +890,17 @@
             <p>support@example.com</p>
           </div>
           <div class="contact-item">
-            <div class="contact-icon-box">
+            <div class="contact-icon-box text-black">
               <svg
-                width="19"
-                height="19"
-                viewBox="0 0 19 19"
-                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
               >
+                <!-- Icon from Google Material Icons by Material Design Authors - https://github.com/material-icons/material-icons/blob/master/LICENSE -->
                 <path
-                  d="M17.5866 12.5899L13.1578 10.6053C12.9572 10.5193 12.7382 10.4847 12.5208 10.5047C12.3034 10.5247 12.0945 10.5985 11.9128 10.7196C11.8944 10.7315 11.8768 10.7446 11.8603 10.759L9.54564 12.7278C9.52162 12.7409 9.49489 12.7482 9.46755 12.7492C9.44021 12.7501 9.41302 12.7447 9.38814 12.7334C7.90032 12.0153 6.35907 10.4834 5.63814 9.0162C5.62613 8.99168 5.61989 8.96474 5.61989 8.93745C5.61989 8.91015 5.62613 8.88321 5.63814 8.8587L7.61345 6.51495C7.62762 6.4976 7.64077 6.47945 7.65282 6.46057C7.77225 6.27823 7.84439 6.06902 7.86272 5.85182C7.88105 5.63463 7.845 5.41629 7.75782 5.21651L5.7872 0.795259C5.67529 0.534267 5.48175 0.316611 5.23563 0.174957C4.98951 0.0333034 4.70409 -0.0247065 4.4222 0.00963374C3.1971 0.170693 2.07256 0.772326 1.25872 1.7021C0.444884 2.63188 -0.0025572 3.82618 1.09944e-05 5.06182C1.09944e-05 12.4024 5.97189 18.3743 13.3125 18.3743C14.5481 18.3767 15.7423 17.9292 16.672 17.1154C17.6018 16.3016 18.2034 15.1772 18.3647 13.9521C18.399 13.6716 18.3417 13.3874 18.2015 13.142C18.0613 12.8966 17.8457 12.7029 17.5866 12.5899ZM13.3125 17.2493C6.59251 17.2493 1.12501 11.7818 1.12501 5.06182C1.12188 4.09988 1.46908 3.1697 2.10174 2.44508C2.7344 1.72046 3.60925 1.25097 4.56282 1.12432H4.58439C4.62217 1.12503 4.65885 1.13713 4.68963 1.15905C4.72041 1.18096 4.74386 1.21167 4.75689 1.24713L6.73501 5.6637C6.74629 5.68825 6.75213 5.71495 6.75213 5.74198C6.75213 5.769 6.74629 5.7957 6.73501 5.82026L4.75595 8.16963C4.74118 8.18641 4.72771 8.20427 4.71564 8.22307C4.5918 8.41212 4.51887 8.62995 4.50393 8.85546C4.48898 9.08097 4.53252 9.30651 4.63032 9.51026C5.46189 11.2128 7.17751 12.9153 8.89876 13.7468C9.10369 13.8441 9.33034 13.8866 9.55659 13.8701C9.78284 13.8537 10.001 13.7789 10.1897 13.6531C10.2075 13.6409 10.2253 13.6278 10.2422 13.6137L12.5559 11.6449C12.5788 11.6327 12.604 11.6255 12.6299 11.6239C12.6558 11.6222 12.6817 11.6262 12.7059 11.6356L17.1356 13.6203C17.1718 13.6357 17.2022 13.6621 17.2226 13.6957C17.243 13.7294 17.2522 13.7686 17.2491 13.8078C17.1231 14.7618 16.654 15.6373 15.9296 16.2706C15.2051 16.904 14.2748 17.2519 13.3125 17.2493Z"
                   fill="black"
+                  d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28"
                 />
               </svg>
             </div>
