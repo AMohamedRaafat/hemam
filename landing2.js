@@ -97,22 +97,151 @@ function highlightActiveLink() {
 
 window.addEventListener("scroll", highlightActiveLink);
 
-// FAQ Toggle Functionality
+// FAQ Toggle Functionality with Video Integration
 const faqItems = document.querySelectorAll(".faq-item");
+const desktopVideo = document.getElementById("faq-video");
+const videoContainer = document.getElementById("main-video-container");
+let currentVideoSrc = null;
+let isVideoVisible = true;
+
+// Initialize first FAQ item as active and load its video
+if (faqItems.length > 0 && desktopVideo) {
+  const firstItem = faqItems[0];
+  const firstVideo = firstItem.getAttribute("data-video");
+  
+  // Set initial active state
+  firstItem.classList.add("active");
+  currentVideoSrc = firstVideo;
+  
+  // Load initial video with animation
+  if (firstVideo) {
+    loadVideo(firstVideo, false); // Don't animate on initial load
+  }
+}
+
+function animateVideoOut() {
+  return new Promise((resolve) => {
+    if (!videoContainer) {
+      resolve();
+      return;
+    }
+    
+    videoContainer.classList.add("video-hiding");
+    videoContainer.classList.remove("video-showing", "video-loaded");
+    
+    setTimeout(() => {
+      videoContainer.classList.add("video-hidden");
+      videoContainer.classList.remove("video-hiding");
+      isVideoVisible = false;
+      resolve();
+    }, 400); // Match CSS transition duration
+  });
+}
+
+function animateVideoIn() {
+  return new Promise((resolve) => {
+    if (!videoContainer) {
+      resolve();
+      return;
+    }
+    
+    videoContainer.classList.remove("video-hidden", "video-hiding");
+    videoContainer.classList.add("video-showing");
+    
+    // Force reflow to ensure animation starts
+    videoContainer.offsetHeight;
+    
+    setTimeout(() => {
+      videoContainer.classList.remove("video-showing");
+      videoContainer.classList.add("video-loaded");
+      isVideoVisible = true;
+      resolve();
+    }, 400); // Match CSS transition duration
+  });
+}
+
+function loadVideo(videoSrc, animate = true) {
+  if (!desktopVideo || !videoContainer) return;
+  
+  const loadProcess = async () => {
+    // If same video and visible, just return
+    if (currentVideoSrc === videoSrc && isVideoVisible) {
+      return;
+    }
+    
+    // If animating, hide current video first
+    if (animate && isVideoVisible) {
+      await animateVideoOut();
+    }
+    
+    // Add loading animation
+    videoContainer.classList.add("video-loading");
+    videoContainer.classList.remove("video-loaded");
+    
+    // Pause current video
+    desktopVideo.pause();
+    
+    // Change video source
+    desktopVideo.src = videoSrc;
+    currentVideoSrc = videoSrc;
+    
+    // Load new video
+    desktopVideo.load();
+    
+    // When video is loaded, show it with animation
+    desktopVideo.addEventListener("loadeddata", async () => {
+      videoContainer.classList.remove("video-loading");
+      
+      if (animate) {
+        await animateVideoIn();
+      } else {
+        videoContainer.classList.add("video-loaded");
+        isVideoVisible = true;
+      }
+    }, { once: true });
+  };
+  
+  loadProcess();
+}
 
 faqItems.forEach((item) => {
   const question = item.querySelector(".faq-question");
   if (question) {
-    question.addEventListener("click", () => {
-      // Close other FAQ items
+    question.addEventListener("click", async () => {
+      const isCurrentlyActive = item.classList.contains("active");
+      
+      // Close all FAQ items
       faqItems.forEach((otherItem) => {
-        if (otherItem !== item) {
-          otherItem.classList.remove("active");
-        }
+        otherItem.classList.remove("active");
       });
-
-      // Toggle current FAQ item
-      item.classList.toggle("active");
+      
+      // Pause all mobile videos
+      const allMobileVideos = document.querySelectorAll(".mobile-video-container video");
+      allMobileVideos.forEach(video => {
+        video.pause();
+      });
+      
+      if (!isCurrentlyActive) {
+        // Open clicked item
+        item.classList.add("active");
+        
+        // Update desktop video
+        const videoSrc = item.getAttribute("data-video");
+        if (videoSrc && desktopVideo) {
+          loadVideo(videoSrc);
+        }
+        
+        // Play mobile video if exists
+        const mobileVideo = item.querySelector(".mobile-video-container video");
+        if (mobileVideo) {
+          mobileVideo.play().catch(e => console.log("Video play failed:", e));
+        }
+      } else {
+        // If clicking the same item, close it and hide video
+        if (desktopVideo && isVideoVisible) {
+          animateVideoOut();
+        }
+      }
     });
   }
 });
