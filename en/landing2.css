@@ -215,6 +215,25 @@ body * {
   right: 0;
 }
 
+/* Language button styles (also present in styles.css) */
+.desktop-lang-btn{
+  background: var(--white);
+  color: var(--black);
+  padding: 8px 10px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.desktop-lang-btn i{color:var(--black)}
+.drawer-lang-btn{border:1px solid #e6e6e6; margin-bottom: 8px}
+@media (max-width: 767px){
+  .desktop-lang-btn{display:none}
+}
+
 .drawer-menu .bg-black {
   background: var(--black);
   position: sticky;

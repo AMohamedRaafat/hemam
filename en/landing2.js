@@ -108,11 +108,11 @@ let isVideoVisible = true;
 if (faqItems.length > 0 && desktopVideo) {
   const firstItem = faqItems[0];
   const firstVideo = firstItem.getAttribute("data-video");
-  
+
   // Set initial active state
   firstItem.classList.add("active");
   currentVideoSrc = firstVideo;
-  
+
   // Load initial video with animation
   if (firstVideo) {
     loadVideo(firstVideo, false); // Don't animate on initial load
@@ -125,10 +125,10 @@ function animateVideoOut() {
       resolve();
       return;
     }
-    
+
     videoContainer.classList.add("video-hiding");
     videoContainer.classList.remove("video-showing", "video-loaded");
-    
+
     setTimeout(() => {
       videoContainer.classList.add("video-hidden");
       videoContainer.classList.remove("video-hiding");
@@ -144,13 +144,13 @@ function animateVideoIn() {
       resolve();
       return;
     }
-    
+
     videoContainer.classList.remove("video-hidden", "video-hiding");
     videoContainer.classList.add("video-showing");
-    
+
     // Force reflow to ensure animation starts
     videoContainer.offsetHeight;
-    
+
     setTimeout(() => {
       videoContainer.classList.remove("video-showing");
       videoContainer.classList.add("video-loaded");
@@ -162,36 +162,36 @@ function animateVideoIn() {
 
 function loadVideo(videoSrc, animate = true) {
   if (!desktopVideo || !videoContainer) return;
-  
+
   const loadProcess = async () => {
     // If same video and visible, just return
     if (currentVideoSrc === videoSrc && isVideoVisible) {
       return;
     }
-    
+
     // If animating, hide current video first
     if (animate && isVideoVisible) {
       await animateVideoOut();
     }
-    
+
     // Add loading animation
     videoContainer.classList.add("video-loading");
     videoContainer.classList.remove("video-loaded");
-    
+
     // Pause current video
     desktopVideo.pause();
-    
+
     // Change video source
     desktopVideo.src = videoSrc;
     currentVideoSrc = videoSrc;
-    
+
     // Load new video
     desktopVideo.load();
-    
+
     // When video is loaded, show it with animation
     desktopVideo.addEventListener("loadeddata", async () => {
       videoContainer.classList.remove("video-loading");
-      
+
       if (animate) {
         await animateVideoIn();
       } else {
@@ -200,7 +200,7 @@ function loadVideo(videoSrc, animate = true) {
       }
     }, { once: true });
   };
-  
+
   loadProcess();
 }
 
@@ -209,28 +209,28 @@ faqItems.forEach((item) => {
   if (question) {
     question.addEventListener("click", async () => {
       const isCurrentlyActive = item.classList.contains("active");
-      
+
       // Close all FAQ items
       faqItems.forEach((otherItem) => {
         otherItem.classList.remove("active");
       });
-      
+
       // Pause all mobile videos
       const allMobileVideos = document.querySelectorAll(".mobile-video-container video");
       allMobileVideos.forEach(video => {
         video.pause();
       });
-      
+
       if (!isCurrentlyActive) {
         // Open clicked item
         item.classList.add("active");
-        
+
         // Update desktop video
         const videoSrc = item.getAttribute("data-video");
         if (videoSrc && desktopVideo) {
           loadVideo(videoSrc);
         }
-        
+
         // Play mobile video if exists
         const mobileVideo = item.querySelector(".mobile-video-container video");
         if (mobileVideo) {
@@ -330,3 +330,38 @@ $(document).ready(function () {
   }
 });
 
+/* lang-switch.js
+   Simple language switcher for this static site.
+   It swaps `/ar/` <-> `/en/` in the current URL and preserves filename.
+*/
+(function () {
+  function switchLang() {
+    var href = window.location.href;
+    var replaced = href;
+
+    // Replace directory segments for both forward and backslashes (file paths)
+    if (/([/\\])ar([/\\])/.test(href)) {
+      replaced = href.replace(/([/\\])ar([/\\])/g, '$1en$2');
+    } else if (/([/\\])en([/\\])/.test(href)) {
+      replaced = href.replace(/([/\\])en([/\\])/g, '$1ar$2');
+    } else {
+      // No language dir detected: insert "en/" before filename
+      var path = window.location.pathname || '';
+      var parts = path.split('/');
+      var filename = parts.pop() || 'index.html';
+      var base = href.slice(0, href.lastIndexOf(filename));
+      if (base) replaced = base + 'en/' + filename; else replaced = href + '/en/';
+    }
+
+    // Navigate
+    window.location.href = replaced;
+  }
+
+  document.addEventListener('click', function (e) {
+    var target = e.target;
+    if (target.closest && (target.closest('.desktop-lang-btn') || target.closest('.drawer-lang-btn'))) {
+      e.preventDefault();
+      switchLang();
+    }
+  });
+})();

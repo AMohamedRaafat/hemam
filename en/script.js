@@ -358,3 +358,38 @@ function showForm() {
         formEl.reset && formEl.reset();
     }
 }
+/* lang-switch.js
+   Simple language switcher for this static site.
+   It swaps `/ar/` <-> `/en/` in the current URL and preserves filename.
+*/
+(function () {
+    function switchLang() {
+        var href = window.location.href;
+        var replaced = href;
+
+        // Replace directory segments for both forward and backslashes (file paths)
+        if (/([/\\])ar([/\\])/.test(href)) {
+            replaced = href.replace(/([/\\])ar([/\\])/g, '$1en$2');
+        } else if (/([/\\])en([/\\])/.test(href)) {
+            replaced = href.replace(/([/\\])en([/\\])/g, '$1ar$2');
+        } else {
+            // No language dir detected: insert "en/" before filename
+            var path = window.location.pathname || '';
+            var parts = path.split('/');
+            var filename = parts.pop() || 'index.html';
+            var base = href.slice(0, href.lastIndexOf(filename));
+            if (base) replaced = base + 'en/' + filename; else replaced = href + '/en/';
+        }
+
+        // Navigate
+        window.location.href = replaced;
+    }
+
+    document.addEventListener('click', function (e) {
+        var target = e.target;
+        if (target.closest && (target.closest('.desktop-lang-btn') || target.closest('.drawer-lang-btn'))) {
+            e.preventDefault();
+            switchLang();
+        }
+    });
+})();

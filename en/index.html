@@ -18,6 +18,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
@@ -42,6 +49,10 @@
               <a href="#download">Download App</a>
             </div>
             <a href="franchise.html" class="nav-cta-btn">Get the Franchise</a>
+            <!-- Language switch (desktop) -->
+            <button class="desktop-lang-btn" aria-label="Switch language">
+              <i class="fa-solid fa-globe"></i>
+            </button>
           </div>
           <button id="menu-toggle" class="menu-toggle">
             <span></span>
@@ -169,6 +180,15 @@
         >
           <span>Get the Franchise</span>
         </a>
+        <!-- Language switch (drawer/mobile) -->
+        <div class="mt-4 mb-4">
+          <button
+            class="drawer-lang-btn bg-[#f3f3f3] w-full rounded-full text-black font-semibold px-5 py-3 flex items-center justify-center gap-4"
+          >
+            <i class="fa-solid fa-globe"></i>
+            <span>العربية</span>
+          </button>
+        </div>
         <div class="mt-8 pt-8 border-t border-gray-200">
           <p class="text-black font-bold text-sm text-center mb-6">
             © 2025 All rights reserved — Hemam
