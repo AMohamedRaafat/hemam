@@ -870,7 +870,7 @@ body {
 .franchise-form-header {
   position: relative;
   z-index: 1;
-  text-align: right;
+  text-align: start;
   margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
@@ -907,7 +907,7 @@ body {
   font-weight: 900;
   color: var(--black);
   margin-bottom: 15px;
-  text-align: right;
+  text-align: start;
 }
 
 .franchise-form-description {
@@ -915,7 +915,7 @@ body {
   color: var(--gray);
   margin-bottom: 0;
   line-height: 1.8;
-  text-align: right;
+  text-align: start;
 }
 
 .franchise-form-wrapper {
@@ -976,7 +976,7 @@ body {
   font-weight: 600;
   color: #414651;
   margin-bottom: 8px;
-  text-align: right;
+  text-align: start;
 }
 
 .form-group input,
@@ -2868,7 +2868,7 @@ html {
   font-size: 0.875rem;
   font-weight: 600;
   color: #1f2937;
-  text-align: right;
+  text-align: start;
 }
 
 .phone-input-wrapper {

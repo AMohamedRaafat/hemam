@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Franchise - Hemam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- intl-tel-input CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar bg-black">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html">
+            <span class="icon-logo" style="color: white"></span>
+          </a>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="nav-links">
+            <a href="index.html#features">Features</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#how-to-start">How It Works</a>
+            <a href="index.html#download">Download App</a>
+          </div>
+          <a href="franchise.html" class="nav-cta-btn">Get the Franchise</a>
+        </div>
+        <button id="menu-toggle" class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Drawer Overlay -->
+    <div id="drawer-overlay" class="drawer-overlay"></div>
+
+    <!-- Drawer Menu -->
+    <div id="drawer-menu" class="drawer-menu">
+      <div class="bg-black flex items-center justify-between mb-5 px-10 py-5">
+        <span class="icon-logo text-[68px] text-[#ff882e]"></span>
+        <button id="close-menu" class="text-white text-2xl">×</button>
+      </div>
+      <div class="px-6">
+        <ul class="text-right flex-1 h-[80vw]">
+          <li>
+            <a
+              href="index.html#home"
+              class="text-black text-[16px] font-semibold block py-1"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html#features"
+              class="text-black text-[16px] font-semibold block py-1"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html#services"
+              class="text-black text-[16px] font-semibold block py-1"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html#how-to-start"
+              class="text-black text-[16px] font-semibold block py-1"
+              >How It Works</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html#download"
+              class="text-black text-[16px] font-semibold block py-1"
+              >Download App</a
+            >
+          </li>
+        </ul>
+        <a
+          href="franchise.html"
+          class="bg-orange-primary w-full mb-3 rounded-full text-black font-semibold px-5 py-2 flex items-center justify-center gap-4 transition"
+        >
+          <span>Get the Franchise</span>
+        </a>
+        <div class="mt-8 pt-8 border-t border-gray-200">
+          <p class="text-black font-bold text-sm text-center mb-6">
+            © 2025 All rights reserved — Hemam
+          </p>
+          <div class="flex gap-3">
+            <a
+              href="#"
+              class="flex-1 bg-black text-white rounded-lg px-2 py-2 flex items-center justify-center gap-4 hover:bg-white-800 transition"
+            >
+              <img
+                src="./assets/imgs/play.svg"
+                alt="Google Play"
+                class="w-8 h-8"
+              />
+              <div class="flex flex-col">
+                <span class="text-[10px] lg:text-[12px]">Get it on</span>
+                <span class="text-[10px] lg:text-[12px] font-bold"
+                  >Google Play</span
+                >
+              </div>
+            </a>
+            <a
+              href="#"
+              class="flex-1 bg-black text-white rounded-lg px-2 py-2 flex items-center justify-center gap-4 hover:bg-white-800 transition"
+            >
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"
+                />
+              </svg>
+              <div class="flex flex-col">
+                <span class="text-[10px] lg:text-[12px]">Download from</span>
+                <span class="text-[10px] lg:text-[12px] font-bold"
+                  >App Store</span
+                >
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Franchise Form Section -->
+    <section id="franchise-form" class="franchise-form-section">
+      <div class="franchise-form-header container">
+        <a href="index.html" class="back-to-home-btn">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2.66699 8H13.3337M13.3337 8L9.33366 4M13.3337 8L9.33366 12"
+              stroke="black"
+              stroke-width="1.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+          <span>Back to Home</span>
+        </a>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h1 class="franchise-form-title">Franchise</h1>
+            <p class="franchise-form-description">
+              Please fill out the following form to obtain the Hemam franchise.
+            </p>
+            <div class="hidden md:block dots">
+              <img src="./assets/imgs/franchise/vector.png" alt="Dots" />
+            </div>
+          </div>
+          <div class="franchise-form-wrapper">
+            <div class="franchise-form-container">
+              <!-- Success State (Hidden by default) -->
+              <div
+                id="success-message"
+                class="success-message"
+                style="display: none"
+              >
+                <div class="success-icon">
+                  <img src="./assets/imgs/franchise/success-icon.svg" />
+                </div>
+                <p class="success-text font-bold">
+                  Form submitted successfully. We will contact you soon.
+                </p>
+                <button
+                  id="new-form-btn"
+                  class="new-form-btn rounded-full"
+                  onclick="showForm()"
+                >
+                  Send a new form
+                </button>
+              </div>
+
+              <!-- Form (Visible by default) -->
+              <form
+                id="franchise-form-element"
+                class="franchise-form"
+                onsubmit="handleSubmit(event)"
+              >
+                <!-- Applicant Type Toggle -->
+                <input
+                  type="hidden"
+                  id="applicantType"
+                  name="applicantType"
+                  value="company"
+                />
+                <div class="applicant-type-toggle">
+                  <button
+                    type="button"
+                    class="toggle-btn active shadow"
+                    id="toggle-company"
+                    data-type="company"
+                    onclick="selectApplicantType('company', event)"
+                  >
+                    Company
+                  </button>
+                  <button
+                    type="button"
+                    class="toggle-btn shadow"
+                    id="toggle-individual"
+                    data-type="individual"
+                    onclick="selectApplicantType('individual', event)"
+                  >
+                    Individual
+                  </button>
+                </div>
+
+                <!-- Full Name Field -->
+                <div class="form-group">
+                  <label for="fullName">Full Name</label>
+                  <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    placeholder="Enter your full name"
+                    required
+                  />
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+
+                <!-- Phone Number Field -->
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="000 000 000"
+                    required
+                  />
+                </div>
+
+                <!-- Target City Field -->
+                <div class="form-group">
+                  <label for="city">Target region for franchise</label>
+                  <div class="select-wrapper">
+                    <select id="city" name="city" required>
+                      <option value="">Select a city</option>
+                      <option value="riyadh">Riyadh</option>
+                      <option value="jeddah">Jeddah</option>
+                      <option value="dammam">Dammam</option>
+                      <option value="khobar">Khobar</option>
+                      <option value="makkah">Makkah</option>
+                      <option value="madina">Madinah</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="flex md:justify-end justify-center">
+                  <button type="submit" class="submit-btn rounded-full">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download App Section -->
+    <section id="download" class="download-section">
+      <div class="md:px-20">
+        <div class="download-content px-2 md:px-20">
+          <div class="download-visual">
+            <div class="download-phone-wrapper">
+              <img
+                src="./assets/imgs/download/phone.png"
+                alt="Hemam App Phone"
+                class="download-phone"
+              />
+              <div class="download-card-wrapper">
+                <img
+                  src="./assets/imgs/download/card.png"
+                  alt="Hemam Card"
+                  class="download-card"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="download-left">
+            <h2 class="download-title">
+              Download the Hemam app now and enjoy easier trips
+            </h2>
+
+            <div class="download-buttons">
+              <a
+                href="#"
+                class="bg-white text-black rounded-lg px-3 py-2 flex items-center justify-center gap-4 transition"
+              >
+                <img
+                  src="./assets/imgs/play.svg"
+                  alt="Google Play"
+                  class="download-icon"
+                />
+                <div class="flex flex-col text-start">
+                  <span class="text-[10px] lg:text-[12px]">Get it on</span>
+                  <span class="text-[10px] lg:text-[12px] font-semibold"
+                    >Google Play</span
+                  >
+                </div>
+              </a>
+              <a
+                href="#"
+                class="bg-white text-black rounded-lg px-3 py-2 flex items-center justify-center gap-4 transition"
+              >
+                <img
+                  src="./assets/imgs/apple.svg"
+                  alt="Google Play"
+                  class="download-icon"
+                />
+                <div class="flex flex-col text-start">
+                  <span class="text-[10px] lg:text-[12px]">Download from</span>
+                  <span class="text-[10px] lg:text-[12px] font-semibold"
+                    >App Store</span
+                  >
+                </div>
+              </a>
+            </div>
+            <div class="download-features">
+              <div class="download-feature">
+                <div class="feature-icon">
+                  <img src="./assets/imgs/updates.svg" />
+                </div>
+                <div>
+                  <span>Exclusive Updates</span>
+                  <p>
+                    Enjoy the latest features and improvements as soon as they
+                    are released.
+                  </p>
+                </div>
+              </div>
+              <div class="download-feature">
+                <div class="feature-icon">
+                  <img src="./assets/imgs/smile.svg" />
+                </div>
+                <div>
+                  <span>Innovation First</span>
+                  <p>
+                    We continuously develop and innovate for a more comfortable
+                    mobility experience.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <span class="footer-logo-text">
+            <svg
+              width="80"
+              height="32"
+              viewBox="0 0 71 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="mx-auto my-8"
+            >
+              <path
+                d="M13.3798 3.60086C14.9398 3.60086 16.3298 3.98086 17.5498 4.74086C18.7898 5.50086 19.7598 6.54086 20.4598 7.86086C21.1598 9.18086 21.5098 10.6509 21.5098 12.2709C21.5098 13.9109 21.1598 15.3309 20.4598 16.5309C19.7798 17.7109 18.8598 18.6109 17.6998 19.2309C16.5598 19.8309 15.3098 20.1309 13.9498 20.1309C12.4498 20.1309 11.0298 19.7809 9.68976 19.0809C9.62976 21.9009 9.03976 24.0109 7.91976 25.4109C6.81976 26.8109 5.14976 27.5109 2.90976 27.5109C2.06976 27.5109 1.09976 27.4009 -0.000240386 27.1809V22.7709C0.95976 23.0309 1.77976 23.1609 2.45976 23.1609C3.49976 23.1609 4.20976 22.8109 4.58976 22.1109C4.98976 21.4309 5.18976 20.3109 5.18976 18.7509V13.1709C5.18976 11.3109 5.51976 9.66086 6.17976 8.22086C6.85976 6.76086 7.81976 5.63086 9.05976 4.83086C10.2998 4.01086 11.7398 3.60086 13.3798 3.60086ZM13.1698 15.9909C14.2698 15.9909 15.1798 15.6709 15.8998 15.0309C16.6198 14.3909 16.9798 13.4709 16.9798 12.2709C16.9798 11.0509 16.6598 10.0609 16.0198 9.30086C15.3998 8.52086 14.5398 8.13086 13.4398 8.13086C12.2198 8.13086 11.2898 8.58086 10.6498 9.48086C10.0098 10.3609 9.69976 11.5909 9.71976 13.1709V14.9109C10.8398 15.6309 11.9898 15.9909 13.1698 15.9909ZM22.4398 14.5809C23.1798 15.3209 24.3998 15.6909 26.0998 15.6909V20.1309C23.4198 20.1309 21.4898 19.5309 20.3098 18.3309C19.1498 17.1309 18.5698 15.3109 18.5698 12.8709C18.5698 12.4309 18.5798 12.0909 18.5998 11.8509H21.4798C21.4798 12.9909 21.7998 13.9009 22.4398 14.5809ZM36.1153 3.66086C37.6553 3.66086 39.0353 4.04086 40.2553 4.80086C41.4953 5.56086 42.4653 6.60086 43.1653 7.92086C43.8853 9.22086 44.2453 10.6609 44.2453 12.2409C44.2453 13.8809 43.8953 15.3009 43.1953 16.5009C42.4953 17.6809 41.5653 18.5809 40.4053 19.2009C39.2453 19.8209 37.9753 20.1309 36.5953 20.1309C35.5153 20.1309 34.4453 19.9409 33.3853 19.5609C32.3453 19.1809 31.3753 18.6109 30.4753 17.8509C29.8753 18.5909 29.1153 19.1609 28.1953 19.5609C27.2953 19.9409 26.2953 20.1309 25.1953 20.1309C24.5153 20.1309 23.9453 19.9109 23.4853 19.4709C23.0253 19.0309 22.7953 18.4909 22.7953 17.8509C22.7953 17.2109 23.0153 16.6909 23.4553 16.2909C23.8953 15.8909 24.4753 15.6909 25.1953 15.6909C25.8353 15.6909 26.3253 15.5809 26.6653 15.3609C27.0053 15.1209 27.2453 14.8009 27.3853 14.4009C27.5453 14.0009 27.7253 13.3809 27.9253 12.5409C28.1253 11.6809 28.2653 11.1209 28.3453 10.8609C28.9653 8.58086 29.9353 6.81086 31.2553 5.55086C32.5953 4.29086 34.2153 3.66086 36.1153 3.66086ZM35.9053 15.9909C37.0053 15.9909 37.9153 15.6709 38.6353 15.0309C39.3553 14.3709 39.7153 13.4409 39.7153 12.2409C39.7153 11.0809 39.3853 10.1209 38.7253 9.36086C38.0653 8.58086 37.1953 8.19086 36.1153 8.19086C35.2953 8.19086 34.6253 8.47086 34.1053 9.03086C33.6053 9.57086 33.1553 10.4409 32.7553 11.6409C32.5553 12.2209 32.4053 12.8309 32.3053 13.4709C32.2653 13.6109 32.2253 13.7809 32.1853 13.9809C32.1653 14.1609 32.1153 14.3709 32.0353 14.6109C32.6153 15.0709 33.2453 15.4209 33.9253 15.6609C34.6053 15.8809 35.2653 15.9909 35.9053 15.9909ZM45.1753 14.5809C45.9153 15.3209 47.1353 15.6909 48.8353 15.6909V20.1309C46.1553 20.1309 44.2253 19.5309 43.0453 18.3309C41.8853 17.1309 41.3053 15.3109 41.3053 12.8709C41.3053 12.4309 41.3153 12.0909 41.3353 11.8509H44.2153C44.2153 12.9909 44.5353 13.9009 45.1753 14.5809ZM57.2079 0.000859261C59.7879 0.000859261 62.0679 0.490859 64.0479 1.47086C66.0279 2.43086 67.5679 3.80086 68.6679 5.58086C69.7679 7.36086 70.3179 9.43086 70.3179 11.7909V20.1309H47.9379C47.3179 20.1309 46.7879 19.9109 46.3479 19.4709C45.8879 19.0109 45.6579 18.4709 45.6579 17.8509C45.6579 17.2509 45.8679 16.7509 46.2879 16.3509C46.7079 15.9509 47.2379 15.7309 47.8779 15.6909H49.5279C49.3679 15.0509 49.2879 14.4409 49.2879 13.8609C49.2879 12.7409 49.5379 11.6909 50.0379 10.7109C50.5579 9.71086 51.3179 8.90086 52.3179 8.28086C53.3179 7.66086 54.5079 7.35086 55.8879 7.35086C57.2879 7.35086 58.4779 7.65086 59.4579 8.25086C60.4579 8.85086 61.2079 9.64086 61.7079 10.6209C62.2279 11.6009 62.4879 12.6409 62.4879 13.7409V15.6909H65.7879V11.8809C65.7879 10.3409 65.4179 9.01086 64.6779 7.89086C63.9379 6.77086 62.8979 5.92086 61.5579 5.34086C60.2379 4.74086 58.7179 4.44086 56.9979 4.44086C54.8579 4.44086 52.6479 4.90086 50.3679 5.82086L48.8979 1.59086C51.7379 0.530859 54.5079 0.000859261 57.2079 0.000859261ZM53.7579 13.7409C53.7579 14.2609 53.9379 14.7209 54.2979 15.1209C54.6779 15.5009 55.2079 15.6909 55.8879 15.6909H58.0179V13.8309C58.0179 13.2909 57.8179 12.8209 57.4179 12.4209C57.0179 12.0009 56.4879 11.7909 55.8279 11.7909C55.1679 11.7909 54.6579 11.9809 54.2979 12.3609C53.9379 12.7409 53.7579 13.2009 53.7579 13.7409Z"
+                fill="white"
+              />
+            </svg>
+          </span>
+          <p class="footer-description">
+            Book your trip easily with professional drivers and
+            wheelchair-friendly vehicles — all through the Hemam app.
+          </p>
+          <div class="social-icons">
+            <a href="#" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                />
+              </svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                />
+              </svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                />
+              </svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-contact-grid">
+          <div class="contact-item">
+            <div class="contact-icon-box">
+              <svg
+                width="20"
+                height="15"
+                viewBox="0 0 20 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.5625 0H0.5625C0.413316 0 0.270242 0.0592632 0.164752 0.164752C0.0592632 0.270242 0 0.413316 0 0.5625V13.3125C0 13.6606 0.138281 13.9944 0.384422 14.2406C0.630564 14.4867 0.964403 14.625 1.3125 14.625H17.8125C18.1606 14.625 18.4944 14.4867 18.7406 14.2406C18.9867 13.9944 19.125 13.6606 19.125 13.3125V0.5625C19.125 0.413316 19.0657 0.270242 18.9602 0.164752C18.8548 0.0592632 18.7117 0 18.5625 0ZM17.1169 1.125L9.5625 8.04938L2.00812 1.125H17.1169ZM17.8125 13.5H1.3125C1.26277 13.5 1.21508 13.4802 1.17992 13.4451C1.14475 13.4099 1.125 13.3622 1.125 13.3125V1.84125L9.1875 9.22688C9.29119 9.32174 9.42665 9.37435 9.56719 9.37435C9.70773 9.37435 9.84318 9.32174 9.94688 9.22688L18 1.84125V13.3125C18 13.3622 17.9802 13.4099 17.9451 13.4451C17.9099 13.4802 17.8622 13.5 17.8125 13.5Z"
+                  fill="black"
+                />
+              </svg>
+            </div>
+            <h4>Technical Support</h4>
+            <p>support@example.com</p>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon-box">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+              >
+                <!-- Icon from Google Material Icons by Material Design Authors - https://github.com/material-icons/material-icons/blob/master/LICENSE -->
+                <path
+                  fill="black"
+                  d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28"
+                />
+              </svg>
+            </div>
+            <h4>Phone Number</h4>
+            <p>+1 (415) 555-0199</p>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon-box">
+              <svg
+                width="17"
+                height="21"
+                viewBox="0 0 17 21"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.0625 4.5C7.3579 4.5 6.66913 4.70894 6.08328 5.10039C5.49743 5.49184 5.04082 6.04823 4.77118 6.69919C4.50154 7.35015 4.43099 8.06645 4.56845 8.75751C4.70591 9.44857 5.04521 10.0833 5.54343 10.5816C6.04166 11.0798 6.67643 11.4191 7.36749 11.5565C8.05855 11.694 8.77485 11.6235 9.42581 11.3538C10.0768 11.0842 10.6332 10.6276 11.0246 10.0417C11.4161 9.45587 11.625 8.7671 11.625 8.0625C11.625 7.11767 11.2497 6.21153 10.5816 5.54343C9.91347 4.87533 9.00733 4.5 8.0625 4.5ZM8.0625 10.5C7.58041 10.5 7.10914 10.357 6.7083 10.0892C6.30745 9.82137 5.99503 9.44069 5.81054 8.99529C5.62606 8.5499 5.57778 8.0598 5.67184 7.58697C5.76589 7.11414 5.99804 6.67982 6.33893 6.33893C6.67982 5.99804 7.11414 5.76589 7.58697 5.67184C8.0598 5.57778 8.5499 5.62606 8.99529 5.81054C9.44069 5.99503 9.82137 6.30745 10.0892 6.7083C10.357 7.10914 10.5 7.58041 10.5 8.0625C10.5 8.70897 10.2432 9.32895 9.78607 9.78607C9.32895 10.2432 8.70897 10.5 8.0625 10.5ZM8.0625 0C5.92495 0.00248119 3.87567 0.852718 2.36419 2.36419C0.852718 3.87567 0.00248119 5.92495 0 8.0625C0 10.9603 1.34438 14.0381 3.88781 16.9631C5.03579 18.2898 6.3278 19.4847 7.74 20.5256C7.83453 20.5918 7.94712 20.6273 8.0625 20.6273C8.17788 20.6273 8.29047 20.5918 8.385 20.5256C9.7972 19.4847 11.0892 18.2898 12.2372 16.9631C14.7806 14.0381 16.125 10.9631 16.125 8.0625C16.1225 5.92495 15.2723 3.87567 13.7608 2.36419C12.2493 0.852718 10.2 0.00248119 8.0625 0ZM8.0625 19.3603C6.65625 18.2747 1.125 13.6519 1.125 8.0625C1.125 6.22256 1.85591 4.45798 3.15695 3.15695C4.45798 1.85591 6.22256 1.125 8.0625 1.125C9.90244 1.125 11.667 1.85591 12.9681 3.15695C14.2691 4.45798 15 6.22256 15 8.0625C15 13.6519 9.46875 18.2747 8.0625 19.3603Z"
+                  fill="black"
+                />
+              </svg>
+            </div>
+            <h4>Address</h4>
+            <p>1024 Jeddah, Saudi Arabia</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-links">
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms and Conditions</a>
+          </p>
+          <p class="copyright">All rights reserved to Hemam 2025</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- intl-tel-input JS -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      // Initialize phone input with intl-tel-input
+      let phoneInput;
+
+      function initPhoneInput() {
+        const phoneInputElement = document.getElementById("phone");
+        if (phoneInputElement && window.intlTelInput) {
+          try {
+            phoneInput = window.intlTelInput(phoneInputElement, {
+              initialCountry: "sa",
+              onlyCountries: ["sa"],
+              utilsScript:
+                "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+              separateDialCode: true,
+              nationalMode: false,
+              formatOnDisplay: true,
+              allowDropdown: false,
+              autoPlaceholder: "polite",
+            });
+
+            // Force set Saudi Arabia immediately
+            phoneInput.setCountry("sa");
+
+            // Update the flag display manually
+            const flagContainer = phoneInputElement.parentElement.querySelector(
+              ".iti__flag-container"
+            );
+            if (flagContainer) {
+              const flagBox = flagContainer.querySelector(".iti__flag-box");
+              if (flagBox) {
+                flagBox.className = "iti__flag-box";
+                flagBox.setAttribute("data-country-code", "sa");
+              }
+            }
+
+            // Force update multiple times to ensure it sticks
+            setTimeout(function () {
+              if (phoneInput) {
+                phoneInput.setCountry("sa");
+                // Manually update flag
+                const flag =
+                  phoneInputElement.parentElement.querySelector(".iti__flag");
+                if (flag) {
+                  flag.className = "iti__flag iti__sa";
+                }
+              }
+            }, 100);
+
+            setTimeout(function () {
+              if (phoneInput) {
+                phoneInput.setCountry("sa");
+                // Trigger update event
+                phoneInputElement.dispatchEvent(new Event("countrychange"));
+              }
+            }, 500);
+          } catch (e) {
+            console.error("Error initializing phone input:", e);
+          }
+        }
+      }
+
+      // Initialize when DOM is ready
+      $(document).ready(function () {
+        initPhoneInput();
+      });
+
+      // Also try after library loads
+      window.addEventListener("load", function () {
+        if (!phoneInput) {
+          setTimeout(initPhoneInput, 100);
+        }
+      });
+
+      // Applicant Type Toggle
+      let selectedApplicantType = "company"; // Default to company
+
+      function selectApplicantType(type, event) {
+        if (event) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+
+        selectedApplicantType = type;
+        const buttons = document.querySelectorAll(".toggle-btn");
+        const hiddenInput = document.getElementById("applicantType");
+
+        // Remove active class from all buttons
+        buttons.forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        // Add active class to selected button
+        const selectedButton = document.querySelector(`[data-type="${type}"]`);
+        if (selectedButton) {
+          selectedButton.classList.add("active");
+        }
+
+        // Update hidden input value
+        if (hiddenInput) {
+          hiddenInput.value = type;
+        }
+      }
+
+      // Ensure toggle works on page load
+      window.addEventListener("load", function () {
+        // Set default to company if not already set
+        const hiddenInput = document.getElementById("applicantType");
+        if (hiddenInput && hiddenInput.value === "company") {
+          selectApplicantType("company", null);
+        }
+      });
+
+      // Form Submission
+      function handleSubmit(event) {
+        event.preventDefault();
+
+        // Validate phone number
+        if (phoneInput && !phoneInput.isValidNumber()) {
+          alert("Please enter a valid phone number");
+          return;
+        }
+
+        // Get form data
+        const formData = {
+          applicantType: selectedApplicantType,
+          fullName: document.getElementById("fullName").value,
+          email: document.getElementById("email").value,
+          phone: phoneInput
+            ? phoneInput.getNumber()
+            : document.getElementById("phone").value,
+          city: document.getElementById("city").value,
+        };
+
+        console.log("Form Data:", formData);
+
+        // Hide form and show success message
+        document.getElementById("franchise-form-element").style.display =
+          "none";
+        document.getElementById("success-message").style.display = "block";
+
+        // Here you would normally send the form data to a server
+        // For now, we just show the success message
+      }
+
+      // Show Form (for new form button)
+      function showForm() {
+        document.getElementById("success-message").style.display = "none";
+        document.getElementById("franchise-form-element").style.display =
+          "block";
+        document.getElementById("franchise-form-element").reset();
+        selectApplicantType("company", null);
+
+        // Reset phone input and ensure Saudi Arabia is selected
+        if (phoneInput) {
+          phoneInput.setNumber("");
+          phoneInput.setCountry("sa");
+
+          // Force update flag display
+          const phoneInputElement = document.getElementById("phone");
+          if (phoneInputElement) {
+            const flag =
+              phoneInputElement.parentElement.querySelector(".iti__flag");
+            if (flag) {
+              flag.className = "iti__flag iti__sa";
+              flag.style.backgroundImage =
+                "url('https://flagcdn.com/w20/sa.png')";
+            }
+          }
+
+          // Force set country again to ensure it doesn't change
+          setTimeout(function () {
+            phoneInput.setCountry("sa");
+            const flag =
+              phoneInputElement.parentElement.querySelector(".iti__flag");
+            if (flag) {
+              flag.className = "iti__flag iti__sa";
+              flag.style.backgroundImage =
+                "url('https://flagcdn.com/w20/sa.png')";
+            }
+          }, 100);
+        }
+      }
+
+      // Function to force update Saudi flag
+      function updateSaudiFlag() {
+        const phoneInputElement = document.getElementById("phone");
+        if (phoneInputElement && phoneInput) {
+          phoneInput.setCountry("sa");
+          const flag =
+            phoneInputElement.parentElement.querySelector(".iti__flag");
+          if (flag) {
+            flag.className = "iti__flag iti__sa";
+            flag.style.backgroundImage =
+              "url('https://flagcdn.com/w20/sa.png')";
+          }
+        }
+      }
+
+      // Listen for country change events to ensure Saudi flag stays
+      $(document).on("countrychange", "#phone", function () {
+        setTimeout(updateSaudiFlag, 50);
+      });
+    </script>
+  </body>
+</html>

@@ -322,3 +322,39 @@ $(document).ready(function () {
     });
 });
 
+function selectApplicantType(type, event) {
+    if (event && event.preventDefault) event.preventDefault();
+    const companyBtn = document.getElementById('toggle-company');
+    const individualBtn = document.getElementById('toggle-individual');
+    const hidden = document.getElementById('applicantType');
+    if (!companyBtn || !individualBtn || !hidden) return;
+    companyBtn.classList.remove('active');
+    individualBtn.classList.remove('active');
+    if (type === 'company') {
+        companyBtn.classList.add('active');
+        hidden.value = 'company';
+    } else {
+        individualBtn.classList.add('active');
+        hidden.value = 'individual';
+    }
+}
+
+function handleSubmit(e) {
+    if (e && e.preventDefault) e.preventDefault();
+    const successMessage = document.getElementById('success-message');
+    const formEl = document.getElementById('franchise-form-element');
+    if (successMessage && formEl) {
+        formEl.style.display = 'none';
+        successMessage.style.display = 'block';
+    }
+}
+
+function showForm() {
+    const successMessage = document.getElementById('success-message');
+    const formEl = document.getElementById('franchise-form-element');
+    if (successMessage && formEl) {
+        successMessage.style.display = 'none';
+        formEl.style.display = 'block';
+        formEl.reset && formEl.reset();
+    }
+}

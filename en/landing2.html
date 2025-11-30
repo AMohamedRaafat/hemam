@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hemam - Join as a Professional Driver</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="landing2.css" />
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header-container">
+      <div class="hero-overlay"></div>
+
+      <!-- Navigation Bar -->
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <span class="icon-logo" style="color: white"></span>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="nav-links">
+              <a href="#features">Features</a>
+              <a href="#how-to-start">How It Works</a>
+              <a href="#testimonials">Testimonials</a>
+              <a href="#faq">FAQ</a>
+              <a href="#download">Download App</a>
+            </div>
+          </div>
+          <button id="menu-toggle" class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section id="home" class="hero-section">
+        <div class="hero-container">
+          <div class="hero-content">
+            <p class="hero-service-title">Medical Transport Service</p>
+            <h1 class="hero-title">
+              Safe, Accessible Rides for People with Disabilities and Seniors
+            </h1>
+            <p class="hero-text">
+              Drive your car, accept orders, and track earnings — all in one app
+              built for you.
+            </p>
+            <div class="hero-app-buttons">
+              <div class="flex gap-3">
+                <a
+                  href="#"
+                  class="md:flex-none bg-[#FFFFFF21] md:bg-[#FFFFFF52] backdrop-blur-md text-white rounded-lg md:px-5 px-2 py-2 flex items-center justify-center gap-4 hover:bg-gray-900 transition"
+                >
+                  <img
+                    src="./assets/imgs/play.svg"
+                    alt="Google Play"
+                    class="w-8 h-8"
+                  />
+                  <div class="flex flex-col text-start">
+                    <span class="text-[10px] md:text-[12px]">Get it on</span>
+                    <span class="text-[10px] md:text-[12px] font-bold"
+                      >Google Play</span
+                    >
+                  </div>
+                </a>
+                <a
+                  href="#"
+                  class="md:flex-none bg-[#FFFFFF21] md:bg-[#FFFFFF52] backdrop-blur-md text-white rounded-lg md:px-5 px-2 py-2 flex items-center justify-center gap-4 hover:bg-gray-900 transition"
+                >
+                  <svg
+                    class="w-10 h-10"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"
+                    />
+                  </svg>
+                  <div class="flex flex-col text-start">
+                    <span class="text-[10px] md:text-[12px]"
+                      >Download from</span
+                    >
+                    <span class="text-[10px] md:text-[12px] font-bold"
+                      >App Store</span
+                    >
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-phone-wrapper">
+              <img
+                src="./assets/imgs/header-driver/hero-img.png"
+                alt="Hemam App Phone"
+                class="hero-phone"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Drawer Overlay -->
+    <div id="drawer-overlay" class="drawer-overlay"></div>
+
+    <!-- Drawer Menu -->
+    <div id="drawer-menu" class="drawer-menu">
+      <div class="bg-black flex items-center justify-between mb-5 px-10 py-5">
+        <span class="icon-logo text-[60px] text-white"></span>
+        <button id="close-menu" class="text-white text-2xl">×</button>
+      </div>
+      <div class="px-6">
+        <ul class="text-right flex-1 h-[80vw]">
+          <li>
+            <a
+              href="#features"
+              class="text-black text-[15px] font-semibold block py-1"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="#testimonials"
+              class="text-black text-[15px] font-semibold block py-1"
+              >Testimonials</a
+            >
+          </li>
+          <li>
+            <a
+              href="#how-to-start"
+              class="text-black text-[15px] font-semibold block py-1"
+              >How It Works</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="#faq"
+              class="text-black text-[15px] font-semibold block py-1"
+              >FAQ</a
+            >
+          </li>
+          <li>
+            <a
+              href="#download"
+              class="text-black text-[15px] font-semibold block py-1"
+              >Download App</a
+            >
+          </li>
+        </ul>
+
+        <div class="mt-8 pt-8 border-t border-gray-200">
+          <p class="text-black font-bold text-sm text-center mb-6">
+            © 2025 All rights reserved — Hemam
+          </p>
+          <div class="flex gap-3">
+            <a
+              href="#"
+              class="flex-1 bg-black text-white rounded-lg px-2 py-2 flex items-center justify-center gap-4 hover:bg-gray-800 transition"
+            >
+              <img
+                src="./assets/imgs/play.svg"
+                alt="Google Play"
+                class="w-8 h-8"
+              />
+              <div class="flex flex-col">
+                <span class="text-[10px] md:text-[12px]">Get it on</span>
+                <span class="text-[10px] md:text-[12px] font-bold"
+                  >Google Play</span
+                >
+              </div>
+            </a>
+            <a
+              href="#"
+              class="flex-1 bg-black text-white rounded-lg px-2 py-2 flex items-center justify-center gap-4 hover:bg-gray-800 transition"
+            >
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"
+                />
+              </svg>
+              <div class="flex flex-col">
+                <span class="text-[10px] md:text-[12px]">Download from</span>
+                <span class="text-[10px] md:text-[12px] font-bold"
+                  >App Store</span
+                >
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+      <div class="px-2 md:px-20">
+        <h2 class="section-title">
+          Everything you need to start with Hemam in Riyadh
+        </h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <div class="icon-circle">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 18 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 14V15C3 15.2833 2.90417 15.5208 2.7125 15.7125C2.52083 15.9042 2.28333 16 2 16H1C0.716667 16 0.479167 15.9042 0.2875 15.7125C0.0958333 15.5208 0 15.2833 0 15V7L2.1 1C2.2 0.7 2.37917 0.458333 2.6375 0.275C2.89583 0.0916667 3.18333 0 3.5 0H14.5C14.8167 0 15.1042 0.0916667 15.3625 0.275C15.6208 0.458333 15.8 0.7 15.9 1L18 7V15C18 15.2833 17.9042 15.5208 17.7125 15.7125C17.5208 15.9042 17.2833 16 17 16H16C15.7167 16 15.4792 15.9042 15.2875 15.7125C15.0958 15.5208 15 15.2833 15 15V14H3ZM2.8 5H15.2L14.15 2H3.85L2.8 5ZM4.5 11C4.91667 11 5.27083 10.8542 5.5625 10.5625C5.85417 10.2708 6 9.91667 6 9.5C6 9.08333 5.85417 8.72917 5.5625 8.4375C5.27083 8.14583 4.91667 8 4.5 8C4.08333 8 3.72917 8.14583 3.4375 8.4375C3.14583 8.72917 3 9.08333 3 9.5C3 9.91667 3.14583 10.2708 3.4375 10.5625C3.72917 10.8542 4.08333 11 4.5 11ZM13.5 11C13.9167 11 14.2708 10.8542 14.5625 10.5625C14.8542 10.2708 15 9.91667 15 9.5C15 9.08333 14.8542 8.72917 14.5625 8.4375C14.2708 8.14583 13.9167 8 13.5 8C13.0833 8 12.7292 8.14583 12.4375 8.4375C12.1458 8.72917 12 9.08333 12 9.5C12 9.91667 12.1458 10.2708 12.4375 10.5625C12.7292 10.8542 13.0833 11 13.5 11ZM2 12H16V7H2V12Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h3>Instant trips near you</h3>
+            <p>
+              Receive requests closest to your location with automatic balance
+              between distance and demand.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <div class="icon-circle">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 17L1 21V5L8 1M8 17L16 21M8 17V1M16 21L23 17V1L16 5M16 21V5M16 5L8 1"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h3>Real-time income tracking</h3>
+            <p>
+              Monitor your daily and weekly earnings, deductions, and rewards
+              with full transparency.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <div class="icon-circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h3>Smart navigation and in-app support</h3>
+            <p>
+              Best route for every trip, congestion alerts, and instant support
+              when needed.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <div class="icon-circle">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8M14 2L20 8M14 2V8H20M16 13H8M16 17H8M10 9H8"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h3>Easy document management</h3>
+            <p>
+              Upload ID, license, and vehicle registration and track approvals
+              in one place.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Start Section -->
+    <section id="how-to-start" class="how-section">
+      <div class="px-2 md:px-20 bg-how-section">
+        <div class="grid grid-cols-1 md:grid-cols-3 md:gap-10">
+          <div class="flex flex-col justify-center start">
+            <div class="section-icon">
+              <div class="icon-circle">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.4999 20.4167H4.08325M7.58325 14H2.33325M10.4999 7.58333H4.66659M19.8333 3.5L12.1374 14.2742C11.7968 14.7511 11.6265 14.9895 11.6338 15.1883C11.6403 15.3614 11.7233 15.5226 11.8604 15.6285C12.0178 15.75 12.3109 15.75 12.8969 15.75H18.6666L17.4999 24.5L25.1958 13.7258C25.5364 13.2489 25.7067 13.0105 25.6993 12.8117C25.6929 12.6386 25.6099 12.4774 25.4728 12.3715C25.3153 12.25 25.0223 12.25 24.4363 12.25H18.6666L19.8333 3.5Z"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h2 class="section-title">Ready to start with Hemam? Here's how</h2>
+            <p class="how-intro">
+              Clear features and simple steps to activate your account, accept
+              rides, and track income easily.
+            </p>
+          </div>
+          <div class="col-span-2 steps-grid">
+            <div class="step-card">
+              <h3>
+                <span class="steps-text">Step 1:</span> Create your account and
+                verify your details
+              </h3>
+              <p>
+                Register in minutes, choose your city, and complete uploading
+                ID, license, and registration for quick verification.
+              </p>
+            </div>
+            <div class="step-card">
+              <h3>
+                <span class="steps-text">Step 2:</span> Start working on the app
+              </h3>
+              <p>
+                After approval, go online and receive the nearest requests with
+                smart routing.
+              </p>
+            </div>
+            <div class="step-card">
+              <h3>
+                <span class="steps-text">Step 3:</span> Complete trips and
+                benefit from incentives
+              </h3>
+              <p>
+                Follow trip policies, explore peak hours, and increase income
+                with weekly offers.
+              </p>
+            </div>
+            <div class="step-card">
+              <h3>
+                <span class="steps-text">Step 4:</span> Monitor performance and
+                income in real time
+              </h3>
+              <p>
+                View your performance dashboard, daily/weekly earnings,
+                deductions, and rewards with full transparency.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+      <div class="container">
+        <div class="testimonials-carousel-wrapper">
+          <div class="owl-carousel owl-theme" id="testimonialsCarousel">
+            <!-- Testimonial 1 -->
+            <div class="item">
+              <div class="testimonial-card">
+                <div class="testimonial-img">
+                  <img
+                    src="./assets/imgs/fe0372fd697939ec3654a75ae419aa6bd92e91ed.png"
+                    alt="Ahmed Al-Otaibi"
+                    onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%23ff882e%22/%3E%3Ctext x=%2250%22 y=%2260%22 font-size=%2230%22 text-anchor=%22middle%22 fill=%22white%22%3EA%3C/text%3E%3C/svg%3E'"
+                  />
+                </div>
+                <div class="testimonial-content">
+                  <h3>Hemam Captains’ Experiences</h3>
+                  <p class="testimonial-text">
+                    “Hemam has significantly improved my income. Requests are
+                    clear, support is fast, and the app is very easy to use. I
+                    increased my earnings and work comfortably without
+                    complications.”
+                  </p>
+                  <div class="testimonial-author">
+                    <div class="author-info">
+                      <h4>Ahmed Al-Otaibi</h4>
+                      <p>Hemam Captain — Riyadh</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+      <h2 class="section-title text-center">Frequently Asked Questions</h2>
+      <div class="container grid grid-cols-1 md:grid-cols-2 gap-10">
+        <!-- Desktop Video Container -->
+        <div
+          class="video-container w-full h-full desktop-video shadow-none"
+          id="main-video-container"
+        >
+          <video
+            id="faq-video"
+            controls
+            class="w-full h-full object-cover rounded-xl"
+          >
+            <source
+              src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+              type="video/mp4"
+            />
+            \ Your browser does not support video playback.
+          </video>
+        </div>
+        <div class="faq-list">
+          <div
+            class="faq-item"
+            data-video="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            data-mobile-video="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+          >
+            <button class="faq-question">
+              <span>How do I register with Hemam?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                You can register easily through the app and upload the required
+                documents. After approval, you can start immediately.
+              </p>
+              <!-- Mobile Video -->
+              <div class="mobile-video-container mt-4 md:hidden">
+                <video controls class="w-full h-48 object-cover rounded-lg">
+                  <source
+                    src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support video playback.
+                </video>
+              </div>
+            </div>
+          </div>
+          <div
+            class="faq-item"
+            data-video="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+            data-mobile-video="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+          >
+            <button class="faq-question">
+              <span>What documents are required for registration?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                You need a driver’s license, national ID, and vehicle
+                registration. All documents can be uploaded through the app.
+              </p>
+              <!-- Mobile Video -->
+              <div class="mobile-video-container mt-4 md:hidden">
+                <video controls class="w-full h-48 object-cover rounded-lg">
+                  <source
+                    src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support video playback.
+                </video>
+              </div>
+            </div>
+          </div>
+          <div
+            class="faq-item"
+            data-video="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+            data-mobile-video="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+          >
+            <button class="faq-question">
+              <span>How long does approval take?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Documents are usually reviewed and approved within 24–48 hours
+                after submission.
+              </p>
+              <!-- Mobile Video -->
+              <div class="mobile-video-container mt-4 md:hidden">
+                <video controls class="w-full h-48 object-cover rounded-lg">
+                  <source
+                    src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support video playback.
+                </video>
+              </div>
+            </div>
+          </div>
+          <div
+            class="faq-item"
+            data-video="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+            data-mobile-video="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          >
+            <button class="faq-question">
+              <span>How is the income calculated?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Income is calculated based on completed trips, distance, and
+                time. You can track earnings in real time through the app.
+              </p>
+              <!-- Mobile Video -->
+              <div class="mobile-video-container mt-4 md:hidden">
+                <video controls class="w-full h-48 object-cover rounded-lg">
+                  <source
+                    src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support video playback.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+      <div class="px-2 md:px-20">
+        <div class="footer-main">
+          <div class="flex gap-4 items-start">
+            <div class="footer-logo-wrapper">
+              <span class="icon-logo footer-logo"></span>
+            </div>
+            <div class="flex flex-col">
+              <p class="footer-description">
+                Book your trip easily with professional drivers and
+                wheelchair-friendly vehicles — all through the Hemam app.
+              </p>
+
+              <div class="social-icons">
+                <a href="#" class="social-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                    />
+                  </svg>
+                </a>
+                <a href="#" class="social-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                    />
+                  </svg>
+                </a>
+                <a href="#" class="social-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                    />
+                  </svg>
+                </a>
+                <a href="#" class="social-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-download-buttons">
+            <a
+              href="#"
+              class="bg-black text-white rounded-lg px-3 py-2 flex items-center justify-center gap-4 transition"
+            >
+              <img
+                src="./assets/imgs/play.svg"
+                alt="Google Play"
+                class="footer-app-icon"
+              />
+              <div class="flex flex-col">
+                <span class="text-[10px] md:text-[12px] font-regular"
+                  >Get it on</span
+                >
+                <span class="text-[10px] md:text-[12px] font-semibold"
+                  >Google Play</span
+                >
+              </div>
+            </a>
+            <a
+              href="#"
+              class="bg-black text-white rounded-lg px-3 py-2 flex items-center justify-center gap-4 transition"
+            >
+              <svg
+                class="footer-app-icon"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"
+                />
+              </svg>
+              <div class="flex flex-col">
+                <span class="text-[10px] md:text-[12px] font-regular"
+                  >Download from</span
+                >
+                <span class="text-[10px] md:text-[12px] font-semibold"
+                  >App Store</span
+                >
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="flex items-center justify-center gap-2">
+          <div
+            class="icon flex items-center justify-center border border-[#e5e5e5] rounded-full w-10 h-10"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <!-- Icon from Basil by Craftwork - https://creativecommons.org/licenses/by/4.0/ -->
+              <mask id="SVGlgxcXbAS" fill="#fff">
+                <path
+                  fill-rule="evenodd"
+                  d="M2.184 21.331a.4.4 0 0 0 .487.494l4.607-1.204a10 10 0 0 0 4.76 1.207h.004c5.486 0 9.958-4.446 9.958-9.912a9.83 9.83 0 0 0-2.914-7.011A9.92 9.92 0 0 0 12.042 2c-5.486 0-9.958 4.446-9.958 9.911c0 1.739.458 3.447 1.33 4.954zM8.886 7.17c.183.005.386.015.579.443c.128.285.343.81.519 1.238c.137.333.249.607.277.663c.065.128.104.275.02.448l-.028.058c-.068.14-.116.24-.23.37l-.143.17c-.085.104-.17.206-.242.278c-.129.128-.262.266-.114.522s.668 1.098 1.435 1.777a6.6 6.6 0 0 0 1.903 1.2q.105.045.17.076c.257.128.41.108.558-.064c.149-.173.643-.749.817-1.005c.168-.256.34-.216.578-.128c.238.089 1.504.71 1.761.837l.143.07c.179.085.3.144.352.23c.064.109.064.62-.148 1.222c-.218.6-1.267 1.176-1.742 1.22l-.135.016c-.436.052-.988.12-2.956-.655c-2.426-.954-4.027-3.32-4.35-3.799l-.053-.076l-.005-.008c-.148-.197-1.049-1.402-1.049-2.646c0-1.19.587-1.81.854-2.092l.047-.05a.95.95 0 0 1 .687-.32c.173 0 .347 0 .495.005"
+                  clip-rule="evenodd"
+                />
+              </mask>
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                stroke="currentColor"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M2.184 21.331a.4.4 0 0 0 .487.494l4.607-1.204a10 10 0 0 0 4.76 1.207h.004c5.486 0 9.958-4.446 9.958-9.912a9.83 9.83 0 0 0-2.914-7.011A9.92 9.92 0 0 0 12.042 2c-5.486 0-9.958 4.446-9.958 9.911c0 1.739.458 3.447 1.33 4.954zM8.886 7.17c.183.005.386.015.579.443c.128.285.343.81.519 1.238c.137.333.249.607.277.663c.065.128.104.275.02.448l-.028.058c-.068.14-.116.24-.23.37l-.143.17c-.085.104-.17.206-.242.278c-.129.128-.262.266-.114.522s.668 1.098 1.435 1.777a6.6 6.6 0 0 0 1.903 1.2q.105.045.17.076c.257.128.41.108.558-.064c.149-.173.643-.749.817-1.005c.168-.256.34-.216.578-.128c.238.089 1.504.71 1.761.837l.143.07c.179.085.3.144.352.23c.064.109.064.62-.148 1.222c-.218.6-1.267 1.176-1.742 1.22l-.135.016c-.436.052-.988.12-2.956-.655c-2.426-.954-4.027-3.32-4.35-3.799l-.053-.076l-.005-.008c-.148-.197-1.049-1.402-1.049-2.646c0-1.19.587-1.81.854-2.092l.047-.05a.95.95 0 0 1 .687-.32c.173 0 .347 0 .495.005Z"
+                clip-rule="evenodd"
+                mask="url(#SVGlgxcXbAS)"
+              />
+            </svg>
+          </div>
+
+          <p class="text-[15px]">
+            Support hotline
+            <span class="font-semibold">920009771</span>
+          </p>
+        </div>
+        <div
+          class="flex justify-center md:justify-between flex-col md:flex-row md:gap-20 items-center gap-5"
+        >
+          <p class="footer-links">
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms and Conditions</a>
+          </p>
+          <p class="copyright">All rights reserved to Hemam 2025</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="landing2.js"></script>
+  </body>
+</html>
