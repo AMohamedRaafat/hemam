@@ -216,7 +216,7 @@ body * {
 }
 
 /* Language button styles (also present in styles.css) */
-.desktop-lang-btn{
+.desktop-lang-btn {
   background: var(--white);
   color: var(--black);
   padding: 8px 10px;
@@ -226,12 +226,19 @@ body * {
   justify-content: center;
   gap: 8px;
   cursor: pointer;
-  border: 1px solid rgba(0,0,0,0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
-.desktop-lang-btn i{color:var(--black)}
-.drawer-lang-btn{border:1px solid #e6e6e6; margin-bottom: 8px}
-@media (max-width: 767px){
-  .desktop-lang-btn{display:none}
+.desktop-lang-btn i {
+  color: var(--black);
+}
+.drawer-lang-btn {
+  border: 1px solid #e6e6e6;
+  margin-bottom: 8px;
+}
+@media (max-width: 767px) {
+  .desktop-lang-btn {
+    display: none;
+  }
 }
 
 .drawer-menu .bg-black {
@@ -927,20 +934,20 @@ body * {
   .desktop-video {
     display: none;
   }
-  
+
   .faq-section .container {
     grid-template-columns: 1fr;
     gap: 30px;
   }
-  
+
   .faq-item {
     margin-bottom: 16px;
   }
-  
+
   .faq-answer {
     padding: 0 16px;
   }
-  
+
   .faq-item.active .faq-answer {
     padding: 0 16px 20px;
   }
